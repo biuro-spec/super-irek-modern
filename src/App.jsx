@@ -195,7 +195,7 @@ const App = () => {
             animate={{ opacity: 1, x: 0 }}
             className="brand"
           >
-            <img src="/assets/branding/super-irek-branding-logo.png" alt="Super Irek - Logo Złota Rączka Racibórz" className="nav-logo" />
+            <img src="assets/branding/super-irek-branding-logo.png" alt="Super Irek - Logo Złota Rączka Racibórz" className="nav-logo" />
             <span className="brand-name">Super Irek</span>
           </motion.div>
           <button 
@@ -267,7 +267,7 @@ const App = () => {
             className="hero-img"
           >
             <div className="image-wrapper">
-              <img src="/irek-victory.png" alt="Super Irek - Profesjonalna Złota Rączka Racibórz i okolice" title="Super Irek - Naprawy Domowe Racibórz" />
+              <img src="irek-victory.png" alt="Super Irek - Profesjonalna Złota Rączka Racibórz i okolice" title="Super Irek - Naprawy Domowe Racibórz" />
               <motion.div 
                 className="experience-badge"
                 animate={{ 
@@ -452,7 +452,7 @@ const App = () => {
                 </div>
              </div>
              <div className="about-image-container">
-               <img src="/assets/branding/super-irek-fachowiec-w-locie.png" alt="Irek - Twój zaufany fachowiec w Raciborzu" className="about-img" />
+               <img src="assets/branding/super-irek-fachowiec-w-locie.png" alt="Irek - Twój zaufany fachowiec w Raciborzu" className="about-img" />
              </div>
           </motion.div>
         </div>
@@ -574,7 +574,7 @@ const App = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col brand-col">
-                <img src="/assets/branding/super-irek-naprawy-domowe.png" alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" />
+                <img src="assets/branding/super-irek-naprawy-domowe.png" alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" />
                <p className="footer-tagline">Rzemieślnicza pasja, ludzkie podejście i dbałość o każdy detal w Twoim domu.</p>
                <div className="footer-location">
                   <MapPin size={18} />
