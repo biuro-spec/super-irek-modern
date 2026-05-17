@@ -301,8 +301,9 @@ section {
 }
 
 .btn-outline {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 1.2rem 2.5rem;
   border: 2px solid var(--primary-green);
@@ -311,6 +312,9 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;
+  cursor: pointer;
+  background: transparent;
+  transition: var(--transition);
 }
 
 .btn-outline:hover {
@@ -1707,6 +1711,9 @@ section {
 
 .gallery-more-wrapper {
   margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Lightbox Modal */

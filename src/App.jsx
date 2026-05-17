@@ -133,11 +133,14 @@ const App = () => {
   
   // Gallery States
   const [activeGalleryFilter, setActiveGalleryFilter] = useState('wszystkie');
-  const [visibleGalleryCount, setVisibleGalleryCount] = useState(8);
+  const [visibleGalleryCount, setVisibleGalleryCount] = useState(3); // Domyślnie 3 (bezpieczne i stabilne dla mobilnych na start)
   const [selectedGalleryImgIndex, setSelectedGalleryImgIndex] = useState(null);
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
+    // Dynamiczne ustawienie widocznych zdjęć na podstawie szerokości ekranu po zamontowaniu
+    if (window.innerWidth >= 768) {
+      setVisibleGalleryCount(8);
+    } else {
       setVisibleGalleryCount(3);
     }
   }, []);
@@ -695,7 +698,7 @@ const App = () => {
             <motion.div {...fadeInUp} className="text-center gallery-more-wrapper">
               <button 
                 className="btn-outline"
-                onClick={() => setVisibleGalleryCount(prev => prev + (window.innerWidth < 768 ? 6 : 8))}
+                onClick={() => setVisibleGalleryCount(filteredGallery.length)}
               >
                 Pokaż więcej realizacji <ChevronRight size={18} />
               </button>
