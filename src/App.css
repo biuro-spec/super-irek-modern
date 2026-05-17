@@ -657,6 +657,11 @@ section {
 
 @media (max-width: 900px) {
   .service-modal {
+    width: 95%;
+    border-radius: 20px;
+  }
+
+  .modal-scroll-area {
     padding: 2rem 1.5rem;
   }
   
