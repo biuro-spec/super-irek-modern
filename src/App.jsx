@@ -621,8 +621,6 @@ const App = () => {
               <p>&copy; {new Date().getFullYear()} Super Irek. Wszystkie prawa zastrzeżone.</p>
             </div>
             <div className="footer-legal">
-              <a href="#">Polityka Prywatności</a>
-              <span className="separator">•</span>
               <a href="#">Twój Fachowiec w Raciborzu</a>
             </div>
           </div>
