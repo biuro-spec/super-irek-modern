@@ -1171,17 +1171,18 @@ section {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
+    width: 85%;
     height: 100vh;
     background: white;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     box-shadow: -10px 0 30px rgba(0,0,0,0.1);
     z-index: 1000;
     padding: 0;
-    display: flex; /* Override display: none if it existed */
+    display: flex;
   }
 
   .nav-links.active {
@@ -1190,6 +1191,8 @@ section {
 
   .nav-links a {
     font-size: 1.2rem;
+    text-align: center;
+    white-space: normal;
   }
 
   .brand-name {
@@ -1240,7 +1243,7 @@ section {
     bottom: -20px;
   }
 
-  .why-grid, .services-grid, .testimonials-grid, .contact-grid, .footer-grid {
+  .why-grid, .services-grid, .testimonials-grid, .contact-grid, .footer-grid, .stat-grid, .form-row {
     grid-template-columns: 1fr !important;
     gap: 2rem;
   }
@@ -1248,6 +1251,14 @@ section {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .contact-form-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .about-quote {
+    padding: 1.5rem;
   }
 
   .section-title {
