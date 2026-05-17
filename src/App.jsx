@@ -620,8 +620,11 @@ const App = () => {
             <div className="copyright">
               <p>&copy; {new Date().getFullYear()} Super Irek. Wszystkie prawa zastrzeżone.</p>
             </div>
-            <div className="footer-legal">
-              <a href="#">Twój Fachowiec w Raciborzu</a>
+            <div className="webstudio-credit">
+              <p>Strona od:</p>
+              <a href="https://webstudio47.pl" target="_blank" rel="noopener noreferrer">
+                <img src={`${import.meta.env.BASE_URL}assets/branding/webstudio47-logo.png`} alt="WebStudio47" className="webstudio-logo" />
+              </a>
             </div>
           </div>
         </div>
