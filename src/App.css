@@ -1108,29 +1108,24 @@ section {
   color: #999;
 }
 
-.webstudio-credit {
+.footer-legal {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.5rem;
 }
 
-.webstudio-credit p {
-  font-size: 0.85rem;
+.footer-legal a {
+  font-size: 0.9rem;
   color: #999;
-  margin: 0;
+  transition: color 0.3s ease;
 }
 
-.webstudio-logo {
-  height: 20px;
-  width: auto;
-  opacity: 0.6;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  display: block;
+.footer-legal a:hover {
+  color: var(--primary-green);
 }
 
-.webstudio-logo:hover {
-  opacity: 1;
-  transform: scale(1.05);
+.separator {
+  color: #ddd;
 }
 
 @media (max-width: 992px) {
@@ -1150,11 +1145,6 @@ section {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-  }
-  
-  .webstudio-credit {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
 
