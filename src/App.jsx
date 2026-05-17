@@ -75,16 +75,16 @@ const App = () => {
 
   const services = [
     {
-      title: "Perfekcyjne Malowanie",
-      shortDesc: "Nie tylko nakładam farbę. Przygotowuję ściany tak, jakbym robił to u siebie – bez pyłu i smug.",
-      desc: "Moje podejście do malowania to proces, a nie tylko czynność. Zaczynam od dokładnego zabezpieczenia podłóg i mebli specjalistycznymi foliami i taśmami. Następnie zajmuję się gruntowaniem i uzupełnianiem ubytków, aby powierzchnia była idealnie gładka. Używam sprawdzonych farb i narzędzi, które gwarantują brak smug. Na koniec sprzątam po sobie tak, że jedynym śladem mojej obecności są piękne ściany.",
+      title: "Poprawki po Fachowcach",
+      shortDesc: "Ktoś zaczął remont i zniknął? Poprawiam krzywe płytki, źle spasowane elementy i inne niedociągnięcia.",
+      desc: "Zdarza się, że ekipa remontowa nie podołała zadaniu, zostawiła niedokończoną pracę lub po prostu popełniła błędy. Specjalizuję się w ratowaniu takich sytuacji. Poprawiam krzywo zamontowane listwy, źle osadzone drzwi, poprawiam niedoróbki montażowe i wykończeniowe. Dbam o to, aby ostateczny efekt wyglądał perfekcyjnie i cieszył oko, bez konieczności ponownego zaczynania całego remontu.",
       details: [
-        "Precyzyjne odcinanie kolorów przy suficie i kątach",
-        "Gruntowanie i profesjonalna naprawa pęknięć",
-        "Dobór odpowiednich farb do rodzaju pomieszczenia",
-        "Pełne sprzątanie po zakończeniu prac malarskich"
+        "Precyzyjne wykańczanie porzuconych lub niedokończonych prac",
+        "Korekta krzywych listew przypodłogowych i montażowych",
+        "Naprawa niepoprawnie spasowanych drzwi, frontów i elementów",
+        "Drobne poprawki wykończeniowe i stolarskie w miejscach ubytków"
       ],
-      icon: <Paintbrush className="icon" />
+      icon: <Sparkles className="icon" />
     },
     {
       title: "Montaż Mebli bez Stresu",
@@ -142,7 +142,7 @@ const App = () => {
         "Fachowa regulacja okien i drzwi (zima/lato)",
         "Wymiana zużytych uszczelek i okuć",
         "Dokręcanie i konserwacja elementów stolarki",
-        "Drobne poprawki malarskie, tynkarskie i stolarskie"
+        "Drobne poprawki wykończeniowe i stolarskie"
       ],
       icon: <Clock className="icon" />
     }
@@ -151,7 +151,7 @@ const App = () => {
   const testimonials = [
     {
       name: "Marek z Raciborza",
-      text: "Irek to rzadki przypadek fachowca, który sprząta po pracy lepiej niż było przed. Malowanie wyszło idealnie.",
+      text: "Irek to rzadki przypadek fachowca, który sprząta po pracy lepiej niż było przed. Prace wykończeniowe i poprawki wyszły idealnie.",
       rating: 5
     },
     {
@@ -595,7 +595,7 @@ const App = () => {
             <div className="footer-col">
               <h4>Usługi</h4>
               <ul>
-                <li><a href="#uslugi">Malowanie ścian</a></li>
+                <li><a href="#uslugi">Poprawki po fachowcach</a></li>
                 <li><a href="#uslugi">Montaż mebli</a></li>
                 <li><a href="#uslugi">Naprawy domowe</a></li>
                 <li><a href="#uslugi">Elektryka i lampy</a></li>

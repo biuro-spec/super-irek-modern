@@ -1100,6 +1100,7 @@ section {
   padding: 24px 0;
   border-top: none;
   width: 100%;
+  overflow: hidden;
 }
 
 .footer-bottom-inner {
