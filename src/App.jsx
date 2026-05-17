@@ -4,9 +4,124 @@ import {
   Hammer, Paintbrush, Droplets, Zap, ShieldCheck, 
   Clock, MapPin, Phone, Mail, ChevronRight, 
   Star, Quote, CheckCircle2, Sparkles, FileText, X,
-  Menu, ArrowUp
+  Menu, ArrowUp, ChevronLeft, Maximize2, Eye
 } from 'lucide-react';
 import './App.css';
+
+const galleryItems = [
+  {
+    id: 1,
+    img: "WhatsApp Image 2026-05-17 at 09.46.44.jpeg",
+    category: "wykonczenie",
+    title: "Precyzyjny montaż wykończeniowy",
+    desc: "Każdy element dopasowany z milimetrową dokładnością."
+  },
+  {
+    id: 2,
+    img: "WhatsApp Image 2026-05-17 at 09.46.46.jpeg",
+    category: "montaz",
+    title: "Montaż szaf i kuchni",
+    desc: "Stabilna konstrukcja i perfekcyjnie wyregulowane fronty."
+  },
+  {
+    id: 3,
+    img: "WhatsApp Image 2026-05-17 at 09.46.53.jpeg",
+    category: "wykonczenie",
+    title: "Prace kafelkarskie i wykończeniowe",
+    desc: "Czystość linii i dbałość o każdy detal spoinowania."
+  },
+  {
+    id: 4,
+    img: "WhatsApp Image 2026-05-17 at 09.46.45.jpeg",
+    category: "wykonczenie",
+    title: "Stylowa łazienka z podświetleniem",
+    desc: "Wyjątkowa dbałość o oświetlenie LED i detale."
+  },
+  {
+    id: 5,
+    img: "WhatsApp Image 2026-05-17 at 09.46.54.jpeg",
+    category: "instalacje",
+    title: "Precyzyjne prace hydrauliczne",
+    desc: "Szczelne podłączenia i estetyczny biały montaż."
+  },
+  {
+    id: 6,
+    img: "WhatsApp Image 2026-05-17 at 09.46.56.jpeg",
+    category: "montaz",
+    title: "Nowoczesne instalacje sanitarne",
+    desc: "Bezpieczne i fachowe ułożenie instalacji."
+  },
+  {
+    id: 7,
+    img: "WhatsApp Image 2026-05-17 at 09.46.53 (1).jpeg",
+    category: "wykonczenie",
+    title: "Drobne poprawki instalacji",
+    desc: "Szybka i skuteczna pomoc w nagłych awariach."
+  },
+  {
+    id: 8,
+    img: "WhatsApp Image 2026-05-17 at 09.46.52.jpeg",
+    category: "wykonczenie",
+    title: "Profesjonalne układanie płytek",
+    desc: "Idealnie równe płaszczyzny i perfekcyjne kąty."
+  },
+  {
+    id: 9,
+    img: "WhatsApp Image 2026-05-17 at 09.46.44 (1).jpeg",
+    category: "instalacje",
+    title: "Nowoczesna łazienka",
+    desc: "Trwałe materiały i nowoczesny styl wykonania."
+  },
+  {
+    id: 10,
+    img: "WhatsApp Image 2026-05-17 at 09.46.57.jpeg",
+    category: "instalacje",
+    title: "Montaż baterii i ceramiki",
+    desc: "Brak przecieków i pełne uszczelnienie silikonowe."
+  },
+  {
+    id: 11,
+    img: "WhatsApp Image 2026-05-17 at 09.46.46 (1).jpeg",
+    category: "wykonczenie",
+    title: "Elegancka toaleta",
+    desc: "Estetyczna zabudowa i wykończenie w drewnie."
+  },
+  {
+    id: 12,
+    img: "WhatsApp Image 2026-05-17 at 09.46.55.jpeg",
+    category: "wykonczenie",
+    title: "Montaż kabiny prysznicowej",
+    desc: "Precyzyjne osadzenie szkła i idealna spoinówka."
+  },
+  {
+    id: 13,
+    img: "WhatsApp Image 2026-05-17 at 09.46.54 (2).jpeg",
+    category: "instalacje",
+    title: "Armatura sanitarna klasy premium",
+    desc: "Sprawne i bezpieczne podłączenie każdego elementu."
+  },
+  {
+    id: 14,
+    img: "WhatsApp Image 2026-05-17 at 09.46.56 (2).jpeg",
+    category: "montaz",
+    title: "Montaż szafek podumywalkowych",
+    desc: "Odpowiednie kotwienie i idealne wyregulowanie szuflad."
+  },
+  {
+    id: 15,
+    img: "WhatsApp Image 2026-05-17 at 09.46.57 (2).jpeg",
+    category: "instalacje",
+    title: "Odpływy i przyłącza",
+    desc: "Szczelne i bezpieczne odprowadzenie wody."
+  },
+  {
+    id: 16,
+    img: "WhatsApp Image 2026-05-17 at 09.46.55 (2).jpeg",
+    category: "wykonczenie",
+    title: "Szczegóły wykończenia łazienki",
+    desc: "Czyste cięcia kafli pod kątem 45 stopni i gładkie fugi."
+  }
+];
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +130,27 @@ const App = () => {
   const [formData, setFormData] = useState({ name: '', message: '', phone: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+  
+  // Gallery States
+  const [activeGalleryFilter, setActiveGalleryFilter] = useState('wszystkie');
+  const [visibleGalleryCount, setVisibleGalleryCount] = useState(8);
+  const [selectedGalleryImgIndex, setSelectedGalleryImgIndex] = useState(null);
+
+  const filteredGallery = activeGalleryFilter === 'wszystkie' 
+    ? galleryItems 
+    : galleryItems.filter(item => item.category === activeGalleryFilter);
+
+  const handleNextImage = () => {
+    setSelectedGalleryImgIndex((prev) => 
+      prev === filteredGallery.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrevImage = () => {
+    setSelectedGalleryImgIndex((prev) => 
+      prev === 0 ? filteredGallery.length - 1 : prev - 1
+    );
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -222,7 +358,8 @@ const App = () => {
             <li><a href="#uslugi" onClick={() => setIsMenuOpen(false)}>W czym pomogę?</a></li>
             <li><a href="#o-mnie" onClick={() => setIsMenuOpen(false)}>Moja Historia</a></li>
             <li><a href="#opinie" onClick={() => setIsMenuOpen(false)}>Opinie Sąsiadów</a></li>
-            <li><a href="#kontakt" className="btn-small" onClick={() => setIsMenuOpen(false)}>Zadzwoń do mnie</a></li>
+            <li><a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galeria Realizacji</a></li>
+            <li><a href="tel:+48603721050" className="btn-small" onClick={() => setIsMenuOpen(false)}>+48 603 721 050</a></li>
           </ul>
         </div>
       </nav>
@@ -424,6 +561,7 @@ const App = () => {
         </div>
       </section>
 
+
       <section id="o-mnie" className="about">
         <div className="container about-grid">
           <motion.div {...fadeInUp} className="about-content">
@@ -497,6 +635,123 @@ const App = () => {
           </motion.div>
         </div>
       </section>
+
+      <section id="galeria" className="gallery">
+        <div className="container">
+          <motion.div {...fadeInUp} className="text-center">
+            <h2 className="section-title">Galeria Realizacji</h2>
+            <p className="section-subtitle">
+              Zobacz efekty moich ostatnich prac. Każde zadanie wykonuję z pełnym skupieniem, dbając o czystość i rzemieślniczą precyzję.
+            </p>
+          </motion.div>
+
+          {/* Grid */}
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            className="gallery-grid"
+          >
+            <AnimatePresence mode="popLayout">
+              {filteredGallery.slice(0, visibleGalleryCount).map((item, index) => (
+                <motion.div
+                  layout
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4 }}
+                  className="gallery-item-card"
+                  onClick={() => setSelectedGalleryImgIndex(index)}
+                >
+                  <div className="gallery-img-wrapper">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}assets/galeria/${item.img}`} 
+                      alt="" 
+                      className="gallery-img"
+                    />
+                    <div className="gallery-hover-overlay">
+                      <div className="gallery-hover-content">
+                        <div className="gallery-zoom-icon">
+                          <Eye size={26} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Show More Button */}
+          {filteredGallery.length > visibleGalleryCount && (
+            <motion.div {...fadeInUp} className="text-center gallery-more-wrapper">
+              <button 
+                className="btn-outline"
+                onClick={() => setVisibleGalleryCount(prev => prev + 8)}
+              >
+                Pokaż więcej realizacji <ChevronRight size={18} />
+              </button>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedGalleryImgIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="lightbox-overlay"
+            onClick={() => setSelectedGalleryImgIndex(null)}
+          >
+            <button 
+              className="lightbox-close"
+              onClick={() => setSelectedGalleryImgIndex(null)}
+            >
+              <X size={32} />
+            </button>
+
+            <button 
+              className="lightbox-nav prev"
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePrevImage();
+              }}
+            >
+              <ChevronLeft size={36} />
+            </button>
+
+            <button 
+              className="lightbox-nav next"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNextImage();
+              }}
+            >
+              <ChevronRight size={36} />
+            </button>
+
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 150 }}
+              className="lightbox-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img 
+                src={`${import.meta.env.BASE_URL}assets/galeria/${filteredGallery[selectedGalleryImgIndex].img}`} 
+                alt="" 
+                className="lightbox-img"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <section id="kontakt" className="contact">
         <div className="container contact-grid">
@@ -588,6 +843,7 @@ const App = () => {
                 <li><a href="#uslugi">Moje Usługi</a></li>
                 <li><a href="#o-mnie">O mnie</a></li>
                 <li><a href="#opinie">Opinie Sąsiadów</a></li>
+                <li><a href="#galeria">Galeria Realizacji</a></li>
                 <li><a href="#kontakt">Zadaj pytanie</a></li>
               </ul>
             </div>
