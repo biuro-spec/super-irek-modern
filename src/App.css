@@ -999,7 +999,7 @@ section {
 /* Footer */
 .footer {
   background: #fdfdfd;
-  padding: 100px 0 40px;
+  padding: 100px 0 0;
   border-top: 1px solid rgba(0, 112, 74, 0.05);
 }
 
@@ -1096,8 +1096,13 @@ section {
 }
 
 .footer-bottom {
-  padding-top: 40px;
-  border-top: 1px solid #eeeeee;
+  background: var(--secondary-green);
+  padding: 24px 0;
+  border-top: none;
+  width: 100%;
+}
+
+.footer-bottom-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1105,27 +1110,40 @@ section {
 
 .copyright p {
   font-size: 0.9rem;
-  color: #999;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
 }
 
-.footer-legal {
+.footer-webstudio {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.8rem;
+}
+
+.footer-webstudio span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.webstudio-logo {
+  height: 18px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.webstudio-logo:hover {
+  transform: scale(1.05);
 }
 
 .footer-legal a {
   font-size: 0.9rem;
-  color: #999;
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s ease;
 }
 
 .footer-legal a:hover {
-  color: var(--primary-green);
-}
-
-.separator {
-  color: #ddd;
+  color: var(--accent-color);
 }
 
 @media (max-width: 992px) {
@@ -1141,10 +1159,15 @@ section {
     gap: 2.5rem;
   }
   
-  .footer-bottom {
+  .footer-bottom-inner {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
+  }
+  
+  .footer-webstudio {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 

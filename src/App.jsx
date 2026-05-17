@@ -616,10 +616,20 @@ const App = () => {
             </div>
           </div>
 
-          <div className="footer-bottom">
+        </div>
+        <div className="footer-bottom">
+          <div className="container footer-bottom-inner">
             <div className="copyright">
               <p>&copy; {new Date().getFullYear()} Super Irek. Wszystkie prawa zastrzeżone.</p>
             </div>
+            
+            <div className="footer-webstudio">
+              <span>Stworzone z pasją dla Super Irka przez</span>
+              <a href="https://webstudio47.pl" target="_blank" rel="noopener noreferrer">
+                <img src={`${import.meta.env.BASE_URL}assets/branding/webstudio-logo.png`} alt="WebStudio47 Logo" className="webstudio-logo" />
+              </a>
+            </div>
+
             <div className="footer-legal">
               <a href="#">Twój Fachowiec w Raciborzu</a>
             </div>
