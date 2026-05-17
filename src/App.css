@@ -1126,7 +1126,7 @@ section {
 }
 
 .webstudio-logo {
-  height: 18px;
+  height: 38px;
   width: auto;
   display: block;
   transition: transform 0.3s ease;
@@ -1165,9 +1165,21 @@ section {
     gap: 1.2rem;
   }
   
+  .copyright {
+    order: 1;
+  }
+  
+  .footer-legal {
+    order: 2;
+  }
+  
   .footer-webstudio {
-    flex-direction: column;
-    gap: 0.5rem;
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
   }
 }
 
