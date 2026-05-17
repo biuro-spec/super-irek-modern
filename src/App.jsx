@@ -624,7 +624,7 @@ const App = () => {
             </div>
             
             <div className="footer-webstudio">
-              <span>Dla Super Irka</span>
+              <span>Strona dla Super Irka od</span>
               <a href="https://webstudio47.pl" target="_blank" rel="noopener noreferrer">
                 <img src={`${import.meta.env.BASE_URL}assets/branding/webstudio-logo.png`} alt="WebStudio47 Logo" className="webstudio-logo" />
               </a>
