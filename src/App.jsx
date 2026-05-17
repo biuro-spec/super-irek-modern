@@ -136,6 +136,12 @@ const App = () => {
   const [visibleGalleryCount, setVisibleGalleryCount] = useState(8);
   const [selectedGalleryImgIndex, setSelectedGalleryImgIndex] = useState(null);
 
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setVisibleGalleryCount(3);
+    }
+  }, []);
+
   const filteredGallery = activeGalleryFilter === 'wszystkie' 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeGalleryFilter);
@@ -689,7 +695,7 @@ const App = () => {
             <motion.div {...fadeInUp} className="text-center gallery-more-wrapper">
               <button 
                 className="btn-outline"
-                onClick={() => setVisibleGalleryCount(prev => prev + 8)}
+                onClick={() => setVisibleGalleryCount(prev => prev + (window.innerWidth < 768 ? 6 : 8))}
               >
                 Pokaż więcej realizacji <ChevronRight size={18} />
               </button>
@@ -759,20 +765,27 @@ const App = () => {
             <h2 className="section-title left">Usiądźmy do Twojego projektu</h2>
             <p>Napisz do mnie lub zadzwoń. Chętnie podpowiem, jak najlepiej podejść do naprawy czy odświeżenia Twojego wnętrza. Konsultacja nic nie kosztuje.</p>
             <div className="contact-methods">
-              <div className="method">
+              <a href="tel:+48603721050" className="method phone-link">
                 <div className="method-icon"><Phone size={24} /></div>
                 <div className="method-text">
                   <label>Zadzwoń bezpośrednio</label>
                   <span>+48 603 721 050</span>
                 </div>
-              </div>
-              <div className="method">
+              </a>
+              <a href="mailto:irek@superirek.pl" className="method email-link">
                 <div className="method-icon"><Mail size={24} /></div>
                 <div className="method-text">
                   <label>Wyślij e-mail</label>
                   <span>irek@superirek.pl</span>
                 </div>
-              </div>
+              </a>
+              <a href="https://maps.google.com/?q=Super+Irek+ul.+Sejmowa+2a,+Racibórz" target="_blank" rel="noopener noreferrer" className="method maps-link">
+                <div className="method-icon"><MapPin size={24} /></div>
+                <div className="method-text">
+                  <label>Mój warsztat &amp; Dojazd</label>
+                  <span>ul. Sejmowa 2a, Racibórz</span>
+                </div>
+              </a>
             </div>
           </motion.div>
           <motion.div {...fadeInUp} className="contact-form-box">
@@ -831,9 +844,15 @@ const App = () => {
             <div className="footer-col brand-col">
                 <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-naprawy-domowe.png`} alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" />
                <p className="footer-tagline">Rzemieślnicza pasja, ludzkie podejście i dbałość o każdy detal w Twoim domu.</p>
-               <div className="footer-location">
+               <a href="https://maps.google.com/?q=Super+Irek+ul.+Sejmowa+2a,+Racibórz" target="_blank" rel="noopener noreferrer" className="footer-location">
                   <MapPin size={18} />
                   <span>ul. Sejmowa 2a, Racibórz</span>
+                </a>
+                 <div className="footer-socials">
+                  <a href="https://facebook.com/profil-super-irek" target="_blank" rel="noopener noreferrer" className="social-link" title="Odwiedź mój profil na Facebooku">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    <span>Facebook</span>
+                  </a>
                 </div>
             </div>
             

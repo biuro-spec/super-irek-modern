@@ -1059,7 +1059,7 @@ section {
 }
 
 .footer-logo {
-  height: 135px;
+  height: 162px; /* Powiększone o 20% z 135px */
   width: auto;
   margin-bottom: 1.5rem;
 }
@@ -1164,9 +1164,11 @@ section {
 }
 
 .footer-webstudio {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 0.6rem;
+  vertical-align: middle;
 }
 
 .footer-webstudio span {
@@ -1174,11 +1176,18 @@ section {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-webstudio a {
+  display: flex;
+  align-items: center;
+}
+
 .webstudio-logo {
-  height: 22px;
+  height: 20px;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   transition: transform 0.3s ease;
+  transform: translateY(0.5px); /* Subtelna optyczna korekta pionowa */
 }
 
 .webstudio-logo:hover {
@@ -1493,6 +1502,10 @@ section {
 }
 
 @media (max-width: 768px) {
+  section {
+    padding: 50px 0; /* Zmniejszone odstępy między sekcjami na telefonach */
+  }
+
   .area-box {
     padding: 3.5rem 1.5rem;
   }
@@ -1501,6 +1514,30 @@ section {
   }
   .area-box p {
     font-size: 1.1rem;
+  }
+
+  /* Rozszerzone modale usług zoptymalizowane pod UX/UI na telefonach */
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .service-modal {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: 24px;
+  }
+  
+  .modal-scroll-area {
+    padding: 2.5rem 1.2rem 1.5rem;
+  }
+  
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    background: #f1f5f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 }
 
@@ -1784,5 +1821,60 @@ section {
 .lightbox-caption p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* Nowe style dla social media, kontaktu oraz eliminacji migotania na iPhone'ach */
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.footer-socials .social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-socials .social-link:hover {
+  color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.contact-methods .method.phone-link,
+.contact-methods .method.email-link,
+.contact-methods .method.maps-link {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-methods .method.phone-link:hover,
+.contact-methods .method.email-link:hover,
+.contact-methods .method.maps-link:hover {
+  background: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 112, 74, 0.08);
+}
+
+/* Poprawka anty-migotania Safari / iOS */
+.modal-overlay, 
+.service-modal, 
+.navbar, 
+.gallery-item-card, 
+.lightbox-overlay,
+.scroll-to-top,
+.btn,
+.btn-outline {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
 }
 
