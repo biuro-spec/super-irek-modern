@@ -1871,19 +1871,19 @@ section {
   transform: translateY(-2px);
 }
 
-.contact-methods .method.phone-link,
-.contact-methods .method.email-link,
-.contact-methods .method.maps-link {
+.contact-methods .method {
   cursor: pointer;
   transition: var(--transition);
 }
 
-.contact-methods .method.phone-link:hover,
-.contact-methods .method.email-link:hover,
-.contact-methods .method.maps-link:hover {
-  background: var(--accent-color);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 112, 74, 0.08);
+.contact-methods .method .method-icon {
+  transition: var(--transition);
+}
+
+.contact-methods .method:hover .method-icon {
+  background: var(--primary-green);
+  color: var(--white);
+  transform: scale(1.08);
 }
 
 /* Poprawka anty-migotania Safari / iOS */

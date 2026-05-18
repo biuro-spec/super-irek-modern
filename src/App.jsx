@@ -873,10 +873,10 @@ const App = () => {
             <div className="footer-col">
               <h4>Usługi</h4>
               <ul>
-                <li><a href="#uslugi">Poprawki po fachowcach</a></li>
-                <li><a href="#uslugi">Montaż mebli</a></li>
-                <li><a href="#uslugi">Naprawy domowe</a></li>
-                <li><a href="#uslugi">Elektryka i lampy</a></li>
+                <li><a href="#uslugi" onClick={() => setSelectedService(services[0])}>Poprawki po fachowcach</a></li>
+                <li><a href="#uslugi" onClick={() => setSelectedService(services[1])}>Montaż mebli</a></li>
+                <li><a href="#uslugi" onClick={() => setSelectedService(services[2])}>Naprawy domowe</a></li>
+                <li><a href="#uslugi" onClick={() => setSelectedService(services[3])}>Elektryka i lampy</a></li>
               </ul>
             </div>
 
