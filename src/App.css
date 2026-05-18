@@ -249,6 +249,7 @@ section {
   padding: 100px 0 60px;
   background: linear-gradient(135deg, var(--cream) 0%, #ffffff 50%, #f9fdfb 100%);
   position: relative;
+  overflow: hidden; /* Zabezpieczenie przed pływaniem tła na iPhone'ach */
 }
 
 .hero-grid {
@@ -1508,6 +1509,11 @@ section {
 @media (max-width: 768px) {
   section {
     padding: 50px 0; /* Zmniejszone odstępy między sekcjami na telefonach */
+  }
+
+  .hero-circle-bg {
+    width: 280px !important;
+    height: 280px !important;
   }
 
   .area-box {
