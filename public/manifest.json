@@ -1,25 +1,26 @@
 {
+  "name": "Super Irek - Złota Rączka Racibórz",
   "short_name": "Super Irek",
-  "name": "Super Irek - Fachowiec Racibórz",
+  "description": "Profesjonalne usługi napraw domowych, montażu mebli i remontów w Raciborzu",
+  "start_url": "/super-irek-modern/",
+  "scope": "/super-irek-modern/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#00704A",
+  "background_color": "#FFFFFF",
   "icons": [
     {
-      "src": "favicon.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "assets/branding/logo-super-irek.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "logo-super-irek.png",
+      "src": "assets/branding/logo-super-irek.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo-super-irek.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#00704A",
-  "background_color": "#ffffff"
+  "categories": ["business", "productivity"]
 }

@@ -279,7 +279,7 @@ section {
   margin-bottom: 1rem;
 }
 
-.slogan-rotator h1 {
+.slogan-rotator h1, .slogan-rotator .hero-slogan {
   margin-bottom: 0 !important;
   font-size: 2.15rem;
   line-height: 1.2;
@@ -440,7 +440,7 @@ section {
 .why-item p {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text-light);
+  color: #3d3d3d;
   margin: 0;
 }
 
@@ -967,6 +967,17 @@ section {
   margin-bottom: 3rem;
 }
 
+.contact-note {
+  font-size: 0.95rem !important;
+  color: var(--secondary-green) !important;
+  background: rgba(0, 112, 74, 0.07);
+  border: 1.5px solid rgba(0, 112, 74, 0.2);
+  padding: 0.75rem 1.2rem;
+  border-radius: 16px;
+  margin: 0.5rem 0 0 0 !important;
+  font-style: italic;
+}
+
 .contact-methods {
   display: flex;
   flex-direction: column;
@@ -1275,7 +1286,7 @@ section {
 
 /* Responsive Audit & Mobile Menu */
 @media (max-width: 1024px) {
-  .slogan-rotator h1 { font-size: 2rem; }
+  .slogan-rotator h1, .slogan-rotator .hero-slogan { font-size: 2rem; }
 }
 
 @media (max-width: 1280px) {
@@ -1439,7 +1450,7 @@ section {
 }
 
 @media (max-width: 480px) {
-  .slogan-rotator h1 { 
+  .slogan-rotator h1, .slogan-rotator .hero-slogan { 
     font-size: 1.8rem; 
     max-width: 420px;
     margin: 0 auto;
@@ -1903,3 +1914,45 @@ section {
   perspective: 1000;
 }
 
+
+/* FAQ */
+.faq {
+  padding: 6rem 0 2rem;
+}
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid rgba(0, 112, 74, 0.15);
+  border-radius: 18px;
+  padding: 0 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-dark, #1f2937);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .faq-chevron {
+  flex: 0 0 auto;
+  color: var(--primary-green);
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary .faq-chevron { transform: rotate(90deg); }
+.faq-item p {
+  padding: 0 0 1.25rem;
+  color: #4b5563;
+  line-height: 1.7;
+}

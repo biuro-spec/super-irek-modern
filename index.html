@@ -2,90 +2,115 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="logo-super-irek.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="manifest" href="manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#00704a" />
     
-    <!-- Google Analytics Placeholder (Insert your ID here) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
-    
+<!-- Google Search Console -->
+    <meta name="google-site-verification" content="3oBHblFmtNXFX24-VPcQiPpTuogOiBJfAnDARngfovk" />
+
     <!-- SEO & Metadata -->
-    <title>Super Irek | Fachowiec od drobnych remontów w Raciborzu</title>
-    <meta name="description" content="Super Irek - Najwyższa jakość drobnych remontów, montażu mebli i napraw domowych w Raciborzu. Rzemieślnicza precyzja i ludzkie podejście. Sprawdź moje usługi!" />
-    <meta name="keywords" content="remonty Racibórz, montaż mebli Racibórz, malowanie ścian Racibórz, hydraulik Racibórz, elektryk Racibórz, drobne naprawy, złota rączka Racibórz" />
+    <title>Złota Rączka Racibórz – Super Irek | Montaż mebli, drobne remonty, naprawy domowe</title>
+    <meta name="description" content="Złota rączka Racibórz i powiat raciborski. Montaż mebli IKEA, naprawy hydrauliczne, lampy i gniazdka, wieszanie luster i karniszy, poprawki po fachowcach. Szybki dojazd, uczciwa wycena. Zadzwoń: 603 721 050." />
+    <meta name="keywords" content="złota rączka Racibórz, montaż mebli Racibórz, drobne remonty Racibórz, naprawy domowe Racibórz, hydraulik Racibórz, montaż lamp Racibórz, wieszanie luster karniszy, poprawki po fachowcach, powiat raciborski" />
+    <meta name="geo.region" content="PL-24" />
+    <meta name="geo.placename" content="Racibórz" />
+    <meta name="geo.position" content="50.0931;18.2185" />
+    <meta name="ICBM" content="50.0931, 18.2185" />
     <meta name="author" content="Super Irek" />
-    <link rel="canonical" href="https://biuro-spec.github.io/super-irek-modern/" />
+    <link rel="canonical" href="https://superirek.pl/" />
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://biuro-spec.github.io/super-irek-modern/" />
-    <meta property="og:title" content="Super Irek | Fachowiec od drobnych remontów w Raciborzu" />
+    <meta property="og:url" content="https://superirek.pl/" />
+    <meta property="og:title" content="Złota Rączka Racibórz – Super Irek | Montaż mebli, drobne remonty, naprawy" />
     <meta property="og:description" content="Twój bohater od drobnych remontów w Raciborzu. Szybka pomoc, rzetelne rzemiosło i pełen profesjonalizm. Sprawdź ofertę!" />
-    <meta property="og:image" content="https://biuro-spec.github.io/super-irek-modern/og-image.png" />
-    <meta property="og:image:secure_url" content="https://biuro-spec.github.io/super-irek-modern/og-image.png" />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image" content="https://superirek.pl/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://superirek.pl/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Super Irek - Profesjonalna Złota Rączka" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://biuro-spec.github.io/super-irek-modern/" />
-    <meta property="twitter:title" content="Super Irek | Fachowiec od drobnych remontów w Raciborzu" />
+    <meta property="twitter:url" content="https://superirek.pl/" />
+    <meta property="twitter:title" content="Złota Rączka Racibórz – Super Irek | Montaż mebli, drobne remonty, naprawy" />
     <meta property="twitter:description" content="Twój bohater od drobnych remontów w Raciborzu. Szybka pomoc, rzetelne rzemiosło i pełen profesjonalizm." />
-    <meta property="twitter:image" content="https://biuro-spec.github.io/super-irek-modern/og-image.png" />
+    <meta property="twitter:image" content="https://superirek.pl/og-image.jpg" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="/irek-victory.webp" fetchpriority="high">
 
     <!-- Schema.org / Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Super Irek - Złota Rączka Racibórz",
-      "image": "https://biuro-spec.github.io/super-irek-modern/logo-super-irek.png",
-      "@id": "https://biuro-spec.github.io/super-irek-modern/",
-      "url": "https://biuro-spec.github.io/super-irek-modern/",
+      "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
+      "@id": "https://superirek.pl/#business",
+      "name": "Super Irek – Złota Rączka Racibórz",
+      "alternateName": "Super Irek",
+      "description": "Złota rączka w Raciborzu i powiecie raciborskim: montaż mebli, drobne naprawy hydrauliczne i elektryczne, wieszanie luster, karniszy i półek, regulacja okien i drzwi, poprawki po innych fachowcach.",
+      "url": "https://superirek.pl/",
+      "image": "https://superirek.pl/og-image.jpg",
+      "logo": "https://superirek.pl/logo-super-irek.webp",
       "telephone": "+48603721050",
-      "priceRange": "PLN",
+      "email": "irek@superirek.pl",
+      "priceRange": "$$",
+      "currenciesAccepted": "PLN",
+      "paymentAccepted": "Gotówka, Przelew, BLIK",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ul. Sejmowa 2a",
         "addressLocality": "Racibórz",
         "postalCode": "47-400",
         "addressRegion": "Śląskie",
         "addressCountry": "PL"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 50.0931,
-        "longitude": 18.2185
+      "geo": { "@type": "GeoCoordinates", "latitude": 50.0931, "longitude": 18.2185 },
+      "areaServed": [
+        { "@type": "City", "name": "Racibórz" },
+        { "@type": "City", "name": "Kuźnia Raciborska" },
+        { "@type": "City", "name": "Pietrowice Wielkie" },
+        { "@type": "City", "name": "Krzanowice" },
+        { "@type": "City", "name": "Krzyżanowice" },
+        { "@type": "City", "name": "Nędza" },
+        { "@type": "City", "name": "Rudnik" },
+        { "@type": "City", "name": "Kornowac" },
+        { "@type": "AdministrativeArea", "name": "powiat raciborski" }
+      ],
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Usługi złotej rączki",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montaż mebli (IKEA, BRW, Agata)", "areaServed": "Racibórz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drobne naprawy hydrauliczne – baterie, syfony, silikony", "areaServed": "Racibórz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montaż lamp, gniazdek i taśm LED", "areaServed": "Racibórz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wieszanie luster, półek, karniszy i uchwytów TV", "areaServed": "Racibórz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poprawki po fachowcach i prace wykończeniowe", "areaServed": "Racibórz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Konserwacja domu – regulacja okien i drzwi", "areaServed": "Racibórz" } }
+        ]
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "17:00"
-        }
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Jakie usługi wykonuje złota rączka w Raciborzu?", "acceptedAnswer": { "@type": "Answer", "text": "Montaż mebli (IKEA, BRW, Agata i inne), drobne naprawy hydrauliczne (baterie, syfony, silikony), montaż lamp, gniazdek i taśm LED, wieszanie luster, karniszy, półek i uchwytów TV, regulację okien i drzwi oraz poprawki po innych fachowcach." } },
+        { "@type": "Question", "name": "Ile kosztuje usługa złotej rączki?", "acceptedAnswer": { "@type": "Answer", "text": "Wycena zależy od zakresu prac i jest zawsze ustalana przed rozpoczęciem. Przy drobnych pracach rozliczenie godzinowe, przy większych (np. montaż kuchni) cena za całość. Dojazd na terenie Raciborza wliczony w cenę." } },
+        { "@type": "Question", "name": "Na jakim terenie działasz?", "acceptedAnswer": { "@type": "Answer", "text": "Racibórz i cały powiat raciborski: Kuźnia Raciborska, Pietrowice Wielkie, Krzanowice, Krzyżanowice, Nędza, Rudnik, Kornowac oraz okoliczne miejscowości." } },
+        { "@type": "Question", "name": "Jak szybko możesz przyjechać?", "acceptedAnswer": { "@type": "Answer", "text": "Przy drobnych naprawach zwykle w ciągu 1–3 dni roboczych, w pilnych sytuacjach staram się pomóc tego samego dnia. Termin najszybciej umówisz telefonicznie: +48 603 721 050." } },
+        { "@type": "Question", "name": "Czy składasz też meble z IKEA i innych sieciówek?", "acceptedAnswer": { "@type": "Answer", "text": "Tak – składam szafy, komody, łóżka, kuchnie i zabudowy, reguluję fronty i zawiasy oraz mocuję meble do ściany dla bezpieczeństwa." } },
+        { "@type": "Question", "name": "Czy po pracy zostawiasz porządek?", "acceptedAnswer": { "@type": "Answer", "text": "Zawsze. Pracuję z folią ochronną i odkurzaczem, a po skończonej pracy zabieram opakowania i śmieci." } }
       ]
     }
     </script>

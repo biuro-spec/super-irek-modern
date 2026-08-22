@@ -11,112 +11,112 @@ import './App.css';
 const galleryItems = [
   {
     id: 1,
-    img: "WhatsApp Image 2026-05-17 at 09.46.44.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.44.webp",
     category: "wykonczenie",
     title: "Precyzyjny montaż wykończeniowy",
     desc: "Każdy element dopasowany z milimetrową dokładnością."
   },
   {
     id: 2,
-    img: "WhatsApp Image 2026-05-17 at 09.46.46.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.46.webp",
     category: "montaz",
     title: "Montaż szaf i kuchni",
     desc: "Stabilna konstrukcja i perfekcyjnie wyregulowane fronty."
   },
   {
     id: 3,
-    img: "WhatsApp Image 2026-05-17 at 09.46.53.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.53.webp",
     category: "wykonczenie",
     title: "Prace kafelkarskie i wykończeniowe",
     desc: "Czystość linii i dbałość o każdy detal spoinowania."
   },
   {
     id: 4,
-    img: "WhatsApp Image 2026-05-17 at 09.46.45.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.45.webp",
     category: "wykonczenie",
     title: "Stylowa łazienka z podświetleniem",
     desc: "Wyjątkowa dbałość o oświetlenie LED i detale."
   },
   {
     id: 5,
-    img: "WhatsApp Image 2026-05-17 at 09.46.54.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.54.webp",
     category: "instalacje",
     title: "Precyzyjne prace hydrauliczne",
     desc: "Szczelne podłączenia i estetyczny biały montaż."
   },
   {
     id: 6,
-    img: "WhatsApp Image 2026-05-17 at 09.46.56.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.56.webp",
     category: "montaz",
     title: "Nowoczesne instalacje sanitarne",
     desc: "Bezpieczne i fachowe ułożenie instalacji."
   },
   {
     id: 7,
-    img: "WhatsApp Image 2026-05-17 at 09.46.53 (1).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.53 (1).webp",
     category: "wykonczenie",
     title: "Drobne poprawki instalacji",
     desc: "Szybka i skuteczna pomoc w nagłych awariach."
   },
   {
     id: 8,
-    img: "WhatsApp Image 2026-05-17 at 09.46.52.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.52.webp",
     category: "wykonczenie",
     title: "Profesjonalne układanie płytek",
     desc: "Idealnie równe płaszczyzny i perfekcyjne kąty."
   },
   {
     id: 9,
-    img: "WhatsApp Image 2026-05-17 at 09.46.44 (1).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.44 (1).webp",
     category: "instalacje",
     title: "Nowoczesna łazienka",
     desc: "Trwałe materiały i nowoczesny styl wykonania."
   },
   {
     id: 10,
-    img: "WhatsApp Image 2026-05-17 at 09.46.57.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.57.webp",
     category: "instalacje",
     title: "Montaż baterii i ceramiki",
     desc: "Brak przecieków i pełne uszczelnienie silikonowe."
   },
   {
     id: 11,
-    img: "WhatsApp Image 2026-05-17 at 09.46.46 (1).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.46 (1).webp",
     category: "wykonczenie",
     title: "Elegancka toaleta",
     desc: "Estetyczna zabudowa i wykończenie w drewnie."
   },
   {
     id: 12,
-    img: "WhatsApp Image 2026-05-17 at 09.46.55.jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.55.webp",
     category: "wykonczenie",
     title: "Montaż kabiny prysznicowej",
     desc: "Precyzyjne osadzenie szkła i idealna spoinówka."
   },
   {
     id: 13,
-    img: "WhatsApp Image 2026-05-17 at 09.46.54 (2).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.54 (2).webp",
     category: "instalacje",
     title: "Armatura sanitarna klasy premium",
     desc: "Sprawne i bezpieczne podłączenie każdego elementu."
   },
   {
     id: 14,
-    img: "WhatsApp Image 2026-05-17 at 09.46.56 (2).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.56 (2).webp",
     category: "montaz",
     title: "Montaż szafek podumywalkowych",
     desc: "Odpowiednie kotwienie i idealne wyregulowanie szuflad."
   },
   {
     id: 15,
-    img: "WhatsApp Image 2026-05-17 at 09.46.57 (2).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.57 (2).webp",
     category: "instalacje",
     title: "Odpływy i przyłącza",
     desc: "Szczelne i bezpieczne odprowadzenie wody."
   },
   {
     id: 16,
-    img: "WhatsApp Image 2026-05-17 at 09.46.55 (2).jpeg",
+    img: "WhatsApp Image 2026-05-17 at 09.46.55 (2).webp",
     category: "wykonczenie",
     title: "Szczegóły wykończenia łazienki",
     desc: "Czyste cięcia kafli pod kątem 45 stopni i gładkie fugi."
@@ -311,6 +311,33 @@ const App = () => {
     }
   ];
 
+  const faqs = [
+    {
+      q: "Jakie usługi wykonuje złota rączka w Raciborzu?",
+      a: "Montaż mebli (IKEA, BRW, Agata i inne), drobne naprawy hydrauliczne (baterie, syfony, silikony), montaż lamp, gniazdek i taśm LED, wieszanie luster, karniszy, półek i uchwytów TV, regulację okien i drzwi oraz poprawki po innych fachowcach. Jeśli nie masz pewności, czy zajmę się Twoim problemem – po prostu zadzwoń."
+    },
+    {
+      q: "Ile kosztuje usługa złotej rączki?",
+      a: "Wycena zależy od zakresu prac i jest zawsze ustalana przed rozpoczęciem – bez niespodzianek. Przy drobnych pracach rozliczam się godzinowo, przy większych (np. montaż kuchni) podaję cenę za całość. Dojazd na terenie Raciborza jest wliczony w cenę."
+    },
+    {
+      q: "Na jakim terenie działasz?",
+      a: "Racibórz i cały powiat raciborski: Kuźnia Raciborska, Pietrowice Wielkie, Krzanowice, Krzyżanowice, Nędza, Rudnik, Kornowac oraz okoliczne miejscowości."
+    },
+    {
+      q: "Jak szybko możesz przyjechać?",
+      a: "Przy drobnych naprawach zwykle w ciągu 1–3 dni roboczych, a w pilnych sytuacjach (np. cieknący kran) staram się pomóc tego samego dnia. Najszybciej umówisz termin telefonicznie: +48 603 721 050."
+    },
+    {
+      q: "Czy składasz też meble z IKEA i innych sieciówek?",
+      a: "Tak – to jedna z moich ulubionych prac. Składam szafy, komody, łóżka, kuchnie i zabudowy, reguluję fronty i zawiasy oraz mocuję meble do ściany dla bezpieczeństwa."
+    },
+    {
+      q: "Czy po pracy zostawiasz porządek?",
+      a: "Zawsze. Pracuję z folią ochronną i odkurzaczem, a po skończonej pracy zabieram ze sobą opakowania i śmieci. Klienci często mówią, że po mnie jest czyściej niż było."
+    }
+  ];
+
   const slogans = [
     "Musisz złożyć szafę? – Wezwij Super Irka!",
     "Cieknie Ci kran? – Wezwij Super Irka!",
@@ -340,7 +367,7 @@ const App = () => {
             animate={{ opacity: 1, x: 0 }}
             className="brand"
           >
-            <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-branding-logo.png`} alt="Super Irek - Logo Złota Rączka Racibórz" className="nav-logo" />
+            <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-branding-logo.webp`} alt="Super Irek - Logo Złota Rączka Racibórz" className="nav-logo" />
             <span className="brand-name">Super Irek</span>
           </motion.div>
           <button 
@@ -383,9 +410,11 @@ const App = () => {
             className="hero-text"
           >
             <motion.span variants={staggerItem} className="hero-badge">Rzemiosło z Serca • Racibórz</motion.span>
+            <h1 className="sr-only">Super Irek – Złota Rączka Racibórz: drobne remonty, montaż mebli, naprawy hydrauliczne i elektryczne</h1>
             <motion.div variants={staggerItem} className="slogan-rotator">
               <AnimatePresence mode="wait">
-                <motion.h1
+                <motion.p
+                  className="hero-slogan"
                   key={sloganIndex}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -393,7 +422,7 @@ const App = () => {
                   transition={{ duration: 0.5 }}
                 >
                   {slogans[sloganIndex]}
-                </motion.h1>
+                </motion.p>
               </AnimatePresence>
             </motion.div>
             <motion.p variants={staggerItem}>
@@ -413,7 +442,7 @@ const App = () => {
             className="hero-img"
           >
             <div className="image-wrapper">
-              <img src={`${import.meta.env.BASE_URL}irek-victory.png`} alt="Super Irek - Profesjonalna Złota Rączka Racibórz i okolice" title="Super Irek - Naprawy Domowe Racibórz" />
+              <img src={`${import.meta.env.BASE_URL}irek-victory.webp`} alt="Super Irek - Profesjonalna Złota Rączka Racibórz i okolice" title="Super Irek - Naprawy Domowe Racibórz" fetchpriority="high" loading="eager"  />
               <motion.div 
                 className="experience-badge"
                 animate={{ 
@@ -445,10 +474,11 @@ const App = () => {
           </motion.div>
         </div>
       </header>
-
-      <section id="dlaczego" className="why-me">
+      <main>
+      <section id="dlaczego" className="why-me" aria-labelledby="dlaczego-title">
         <div className="container">
-          <motion.div 
+          <h2 id="dlaczego-title" className="sr-only">Dlaczego warto wybrać Super Irka</h2>
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -599,7 +629,7 @@ const App = () => {
                 </div>
              </div>
              <div className="about-image-container">
-               <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-fachowiec-w-locie.png`} alt="Irek - Twój zaufany fachowiec w Raciborzu" className="about-img" />
+               <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-fachowiec-w-locie.webp`} alt="Irek - Twój zaufany fachowiec w Raciborzu" className="about-img" loading="lazy" />
              </div>
           </motion.div>
         </div>
@@ -639,8 +669,27 @@ const App = () => {
         <div className="container">
           <motion.div {...fadeInUp} className="area-box">
             <MapPin className="pin" size={40} />
-            <h3>Działam w całym powiecie raciborskim</h3>
-            <p>Mój warsztat mieści się przy <strong>ul. Sejmowej 2a w Raciborzu</strong>, skąd wyruszam do moich sąsiadów. Z przyjemnością dojadę do Kuźni Raciborskiej, Pietrowic, Krzanowic, Krzyżanowic, Nędzy, Rudnika czy Kornowaca.</p>
+            <h2>Działam w całym powiecie raciborskim</h2>
+            <p>Działam na terenie Raciborza i okolic. Z przyjemnością dojadę do Kuźni Raciborskiej, Pietrowic, Krzanowic, Krzyżanowic, Nędzy, Rudnika czy Kornowaca.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="faq" className="faq" aria-labelledby="faq-title">
+        <div className="container">
+          <motion.div {...fadeInUp}>
+            <h2 id="faq-title" className="section-title">Najczęstsze pytania</h2>
+            <div className="faq-list">
+              {faqs.map((item, i) => (
+                <details key={i} className="faq-item">
+                  <summary>
+                    <span>{item.q}</span>
+                    <ChevronRight className="faq-chevron" size={20} />
+                  </summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
@@ -675,10 +724,11 @@ const App = () => {
                   onClick={() => setSelectedGalleryImgIndex(index)}
                 >
                   <div className="gallery-img-wrapper">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}assets/galeria/${item.img}`} 
-                      alt="" 
+                    <img
+                      src={`${import.meta.env.BASE_URL}assets/galeria/${item.img}`}
+                      alt=""
                       className="gallery-img"
+                      loading="lazy"
                     />
                     <div className="gallery-hover-overlay">
                       <div className="gallery-hover-content">
@@ -775,6 +825,7 @@ const App = () => {
                   <span>+48 603 721 050</span>
                 </div>
               </a>
+              <p className="contact-note">Jeśli nie odbieram — jestem właśnie na akcji. Na pewno oddzwonię!</p>
               <a href="mailto:irek@superirek.pl" className="method email-link">
                 <div className="method-icon"><Mail size={24} /></div>
                 <div className="method-text">
@@ -782,11 +833,11 @@ const App = () => {
                   <span>irek@superirek.pl</span>
                 </div>
               </a>
-              <a href="https://maps.google.com/?q=Super+Irek+ul.+Sejmowa+2a,+Racibórz" target="_blank" rel="noopener noreferrer" className="method maps-link">
+              <a href="https://maps.google.com/?q=Super+Irek+Racibórz" target="_blank" rel="noopener noreferrer" className="method maps-link">
                 <div className="method-icon"><MapPin size={24} /></div>
                 <div className="method-text">
                   <label>Mój warsztat &amp; Dojazd</label>
-                  <span>ul. Sejmowa 2a, Racibórz</span>
+                  <span>Racibórz i okolice</span>
                 </div>
               </a>
             </div>
@@ -841,15 +892,16 @@ const App = () => {
         </div>
       </section>
 
+      </main>
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col brand-col">
-                <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-naprawy-domowe.png`} alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" />
+                <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-naprawy-domowe.webp`} alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" loading="lazy" />
                <p className="footer-tagline">Rzemieślnicza pasja, ludzkie podejście i dbałość o każdy detal w Twoim domu.</p>
-               <a href="https://maps.google.com/?q=Super+Irek+ul.+Sejmowa+2a,+Racibórz" target="_blank" rel="noopener noreferrer" className="footer-location">
+               <a href="https://maps.google.com/?q=Super+Irek+Racibórz" target="_blank" rel="noopener noreferrer" className="footer-location">
                   <MapPin size={18} />
-                  <span>ul. Sejmowa 2a, Racibórz</span>
+                  <span>Racibórz i okolice</span>
                 </a>
                  <div className="footer-socials">
                   <a href="https://facebook.com/profil-super-irek" target="_blank" rel="noopener noreferrer" className="social-link" title="Odwiedź mój profil na Facebooku">
@@ -860,7 +912,7 @@ const App = () => {
             </div>
             
             <div className="footer-col">
-              <h4>Mapa Strony</h4>
+              <h3>Mapa Strony</h3>
               <ul>
                 <li><a href="#uslugi">Moje Usługi</a></li>
                 <li><a href="#o-mnie">O mnie</a></li>
@@ -871,7 +923,7 @@ const App = () => {
             </div>
 
             <div className="footer-col">
-              <h4>Usługi</h4>
+              <h3>Usługi</h3>
               <ul>
                 <li><a href="#uslugi" onClick={() => setSelectedService(services[0])}>Poprawki po fachowcach</a></li>
                 <li><a href="#uslugi" onClick={() => setSelectedService(services[1])}>Montaż mebli</a></li>
@@ -881,7 +933,7 @@ const App = () => {
             </div>
 
             <div className="footer-col contact-col">
-              <h4>Kontakt</h4>
+              <h3>Kontakt</h3>
               <div className="footer-contact-item">
                 <Phone size={20} />
                 <a href="tel:+48603721050">+48 603 721 050</a>
@@ -904,7 +956,7 @@ const App = () => {
             <div className="footer-webstudio">
               <span>Strona dla Super Irka od</span>
               <a href="https://webstudio47.pl" target="_blank" rel="noopener noreferrer">
-                <img src={`${import.meta.env.BASE_URL}assets/branding/webstudio-logo-v2.png`} alt="WebStudio47 Logo" className="webstudio-logo" />
+                <img src={`${import.meta.env.BASE_URL}assets/branding/webstudio-logo-v2.webp`} alt="WebStudio47 Logo" className="webstudio-logo" loading="lazy" />
               </a>
             </div>
 
@@ -914,17 +966,6 @@ const App = () => {
           </div>
         </div>
       </footer>
-      {/* Dane dla robotów Google (SEO) */}
-      <div style={{ display: 'none' }} itemScope itemType="http://schema.org/LocalBusiness">
-        <span itemProp="name">Super Irek - Złota Rączka Racibórz</span>
-        <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-          <span itemProp="streetAddress">ul. Sejmowa 2a</span>
-          <span itemProp="postalCode">47-400</span>
-          <span itemProp="addressLocality">Racibórz</span>
-        </div>
-        <span itemProp="telephone">+48603721050</span>
-        <span itemProp="url">https://superirek.pl</span>
-      </div>
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
