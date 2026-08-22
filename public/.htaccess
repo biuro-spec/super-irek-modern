@@ -1,5 +1,12 @@
 Options -MultiViews
 RewriteEngine On
+
+# Jeden adres kanoniczny: https://superirek.pl (bez www, wymuszone https) - 301
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://superirek.pl/$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [QSA,L]
