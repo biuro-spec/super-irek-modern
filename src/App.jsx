@@ -844,7 +844,7 @@ const App = () => {
                   <span>irek@superirek.pl</span>
                 </div>
               </a>
-              <a href="https://maps.google.com/?q=Super+Irek+Racibórz" target="_blank" rel="noopener noreferrer" className="method maps-link">
+              <a href="https://share.google/dLp2Yzpm0KwX41JQ0" target="_blank" rel="noopener noreferrer" className="method maps-link">
                 <div className="method-icon"><MapPin size={24} /></div>
                 <div className="method-text">
                   <label>Mój warsztat &amp; Dojazd</label>
@@ -910,7 +910,7 @@ const App = () => {
             <div className="footer-col brand-col">
                 <img src={`${import.meta.env.BASE_URL}assets/branding/super-irek-naprawy-domowe.webp`} alt="Super Irek - Złota Rączka Racibórz" className="footer-logo" loading="lazy" />
                <p className="footer-tagline">Rzemieślnicza pasja, ludzkie podejście i dbałość o każdy detal w Twoim domu.</p>
-               <a href="https://maps.google.com/?q=Super+Irek+Racibórz" target="_blank" rel="noopener noreferrer" className="footer-location">
+               <a href="https://share.google/dLp2Yzpm0KwX41JQ0" target="_blank" rel="noopener noreferrer" className="footer-location">
                   <MapPin size={18} />
                   <span>Racibórz i okolice</span>
                 </a>
