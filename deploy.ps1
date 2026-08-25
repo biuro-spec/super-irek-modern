@@ -8,8 +8,8 @@ $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
 
 if ($Build) {
-  Write-Host ">> npm run build..." -ForegroundColor Cyan
-  npm run build
+  Write-Host ">> npm run build:deploy (build + prerender)..." -ForegroundColor Cyan
+  npm run build:deploy
   if ($LASTEXITCODE -ne 0) { throw "Build nieudany" }
 }
 if (-not (Test-Path "$PSScriptRoot\dist\index.html")) { throw "Brak dist/index.html - najpierw build" }

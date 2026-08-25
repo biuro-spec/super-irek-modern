@@ -6,6 +6,8 @@ import {
   Star, Quote, CheckCircle2, Sparkles, FileText, X,
   Menu, ArrowUp, ChevronLeft, Maximize2, Eye
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { pages as servicePages } from './pages/pagesData.js';
 import './App.css';
 
 const galleryItems = [
@@ -352,6 +354,14 @@ const App = () => {
   const [sloganIndex, setSloganIndex] = useState(0);
 
   useEffect(() => {
+    document.title = 'Złota Rączka Racibórz – Super Irek | Montaż mebli, drobne remonty, naprawy domowe';
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', 'Złota rączka Racibórz i powiat raciborski. Montaż mebli IKEA, naprawy hydrauliczne, lampy i gniazdka, wieszanie luster i karniszy, poprawki po fachowcach. Szybki dojazd, uczciwa wycena. Zadzwoń: 603 721 050.');
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://superirek.pl/');
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setSloganIndex((prev) => (prev + 1) % slogans.length);
     }, 8000);
@@ -395,6 +405,7 @@ const App = () => {
             <li><a href="#o-mnie" onClick={() => setIsMenuOpen(false)}>Moja Historia</a></li>
             <li><a href="#opinie" onClick={() => setIsMenuOpen(false)}>Opinie Sąsiadów</a></li>
             <li><a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galeria Realizacji</a></li>
+            <li><Link to="/cennik" onClick={() => setIsMenuOpen(false)}>Cennik</Link></li>
             <li><a href="tel:+48603721050" className="btn-small" onClick={() => setIsMenuOpen(false)}>+48 603 721 050</a></li>
           </ul>
         </div>
@@ -904,7 +915,7 @@ const App = () => {
                   <span>Racibórz i okolice</span>
                 </a>
                  <div className="footer-socials">
-                  <a href="https://facebook.com/profil-super-irek" target="_blank" rel="noopener noreferrer" className="social-link" title="Odwiedź mój profil na Facebooku">
+                  <a href="https://www.facebook.com/profile.php?id=61590415951252" target="_blank" rel="noopener noreferrer" className="social-link" title="Odwiedź mój profil na Facebooku">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                     <span>Facebook</span>
                   </a>
@@ -925,10 +936,9 @@ const App = () => {
             <div className="footer-col">
               <h3>Usługi</h3>
               <ul>
-                <li><a href="#uslugi" onClick={() => setSelectedService(services[0])}>Poprawki po fachowcach</a></li>
-                <li><a href="#uslugi" onClick={() => setSelectedService(services[1])}>Montaż mebli</a></li>
-                <li><a href="#uslugi" onClick={() => setSelectedService(services[2])}>Naprawy domowe</a></li>
-                <li><a href="#uslugi" onClick={() => setSelectedService(services[3])}>Elektryka i lampy</a></li>
+                {servicePages.map((p) => (
+                  <li key={p.slug}><Link to={`/${p.slug}`}>{p.nav}</Link></li>
+                ))}
               </ul>
             </div>
 
