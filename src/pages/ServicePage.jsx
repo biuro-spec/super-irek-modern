@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ChevronRight, CheckCircle2, MapPin, ArrowLeft } from 'lucide-react';
+import Navbar from '../components/Navbar.jsx';
 import { pages, SITE } from './pagesData.js';
 
 // Ustawia title/description/canonical/JSON-LD dla podstrony. Prerender
@@ -76,21 +77,7 @@ const ServicePage = ({ page }) => {
 
   return (
     <div className="app subpage">
-      <nav className="navbar scrolled">
-        <div className="container nav-content">
-          <Link to="/" className="brand">
-            <img
-              src={`${import.meta.env.BASE_URL}assets/branding/super-irek-branding-logo.webp`}
-              alt="Super Irek - Logo Złota Rączka Racibórz"
-              className="nav-logo"
-            />
-            <span className="brand-name">Super Irek</span>
-          </Link>
-          <a href={SITE.phoneHref} className="btn-small subpage-phone">
-            <Phone size={16} /> {SITE.phone}
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="subpage-main container">
         <nav className="breadcrumb" aria-label="Okruszki">

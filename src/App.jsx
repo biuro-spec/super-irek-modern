@@ -4,7 +4,7 @@ import {
   Hammer, Paintbrush, Droplets, Zap, ShieldCheck, 
   Clock, MapPin, Phone, Mail, ChevronRight, 
   Star, Quote, CheckCircle2, Sparkles, FileText, X,
-  Menu, ArrowUp, ChevronLeft, Maximize2, Eye
+  Menu, ArrowUp, ChevronLeft, ChevronDown, Maximize2, Eye
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { pages as servicePages } from './pages/pagesData.js';
@@ -128,6 +128,7 @@ const galleryItems = [
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [formData, setFormData] = useState({ name: '', message: '', phone: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -401,7 +402,30 @@ const App = () => {
           </AnimatePresence>
 
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <li><a href="#uslugi" onClick={() => setIsMenuOpen(false)}>W czym pomogę?</a></li>
+            <li
+              className={`nav-dropdown ${isServicesOpen ? 'open' : ''}`}
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                type="button"
+                className="nav-dropdown-toggle"
+                aria-expanded={isServicesOpen}
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+              >
+                Usługi <ChevronDown size={16} className="nav-dropdown-chevron" />
+              </button>
+              <ul className="nav-dropdown-menu">
+                {servicePages.filter((p) => p.slug !== 'cennik').map((p) => (
+                  <li key={p.slug}>
+                    <Link to={`/${p.slug}`} onClick={() => { setIsMenuOpen(false); setIsServicesOpen(false); }}>{p.nav}</Link>
+                  </li>
+                ))}
+                <li>
+                  <a href="#uslugi" onClick={() => { setIsMenuOpen(false); setIsServicesOpen(false); }}>Wszystkie usługi</a>
+                </li>
+              </ul>
+            </li>
             <li><a href="#o-mnie" onClick={() => setIsMenuOpen(false)}>Moja Historia</a></li>
             <li><a href="#opinie" onClick={() => setIsMenuOpen(false)}>Opinie Sąsiadów</a></li>
             <li><a href="#galeria" onClick={() => setIsMenuOpen(false)}>Galeria Realizacji</a></li>
@@ -437,14 +461,25 @@ const App = () => {
               </AnimatePresence>
             </motion.div>
             <motion.p variants={staggerItem}>
-              Cześć, nazywam się Irek. Znasz to uczucie, gdy coś w domu odmawia posłuszeństwa w najmniej odpowiednim momencie? 
-              Pomogę Ci opanować te małe awarie i większe wyzwania. Naprawiam to, co się zepsuło i montuję to, co nowe, 
-              dbając o Twój dom tak, jak o własny. Bez pośpiechu, bez fuszerki – po prostu po ludzku.
+              Cześć, nazywam się Irek. Naprawiam to, co się zepsuło, i montuję to, co nowe —
+              dbając o Twój dom jak o własny. Bez pośpiechu, bez fuszerki, po ludzku.
             </motion.p>
             <motion.div variants={staggerItem} className="hero-btns">
-              <a href="#kontakt" className="btn">Opowiedz mi o swoim problemie</a>
-              <a href="#uslugi" className="btn-outline">Sprawdź co mogę zrobić <ChevronRight size={18} /></a>
+              <a href="tel:+48603721050" className="btn hero-call"><Phone size={18} /> 603 721 050</a>
+              <a href="#kontakt" className="btn-outline">Opisz swój problem <ChevronRight size={18} /></a>
             </motion.div>
+            <motion.ul variants={staggerItem} className="hero-trust" aria-label="Dlaczego Super Irek">
+              <li><CheckCircle2 size={15} /> Wycena przed pracą</li>
+              <li><CheckCircle2 size={15} /> Dojazd w Raciborzu w cenie</li>
+              <li><CheckCircle2 size={15} /> Po pracy porządek</li>
+            </motion.ul>
+            <motion.nav variants={staggerItem} className="hero-services" aria-label="Najczęstsze usługi">
+              <Link to="/montaz-mebli-raciborz">Montaż mebli</Link>
+              <Link to="/hydraulik-drobne-naprawy-raciborz">Drobna hydraulika</Link>
+              <Link to="/montaz-lamp-gniazdek-raciborz">Lampy i gniazdka</Link>
+              <Link to="/wieszanie-luster-karniszy-tv-raciborz">Lustra i TV</Link>
+              <Link to="/cennik" className="hero-services-more">Cennik <ChevronRight size={14} /></Link>
+            </motion.nav>
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -468,6 +503,24 @@ const App = () => {
               >
                 <span className="years">20+</span>
                 <span className="label">Lat Praktyki</span>
+              </motion.div>
+              <motion.div
+                className="float-card float-card-tools"
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                <Hammer size={18} />
+                <span>Dziś wolne terminy</span>
+              </motion.div>
+              <motion.div
+                className="float-card float-card-stars"
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                <span className="stars" aria-hidden="true">★★★★★</span>
+                <span>Sąsiedzi polecają</span>
               </motion.div>
             </div>
             <motion.div 
