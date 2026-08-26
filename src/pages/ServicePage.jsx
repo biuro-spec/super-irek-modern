@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, ChevronRight, CheckCircle2, MapPin, ArrowLeft } from 'lucide-react';
+import { Phone, ChevronRight, CheckCircle2, MapPin } from 'lucide-react';
 import Navbar from '../components/Navbar.jsx';
 import { pages, SITE } from './pagesData.js';
 
@@ -80,11 +80,6 @@ const ServicePage = ({ page }) => {
       <Navbar />
 
       <main className="subpage-main container">
-        <nav className="breadcrumb" aria-label="Okruszki">
-          <Link to="/"><ArrowLeft size={14} /> Strona główna</Link>
-          <span aria-hidden="true">/</span>
-          <span>{page.nav}</span>
-        </nav>
 
         <h1>{page.h1}</h1>
         <p className="subpage-intro">{page.intro}</p>
