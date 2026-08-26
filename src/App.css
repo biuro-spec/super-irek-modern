@@ -2329,3 +2329,11 @@ section {
 .method.whatsapp-link .method-icon { color: #25D366; }
 .btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; }
 .form-note { font-size: .82rem; color: var(--text-light); margin-top: .7rem; text-align: center; }
+
+/* Kotwice pod przyklejonym menu + poprawki audytu UX */
+section[id] { scroll-margin-top: 90px; }
+.stat-item { padding: 2.2rem 1.4rem; }
+.stat-item .number { font-size: 2.6rem; }
+.stat-item .label { letter-spacing: 1px; opacity: 0.8; }
+.modal-cta-row { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; align-items: center; }
+.modal-cta-row .btn, .modal-cta-row .btn-outline { display: inline-flex; align-items: center; gap: .45rem; padding: .9rem 1.6rem; }

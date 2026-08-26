@@ -234,6 +234,7 @@ Mój numer telefonu: ${formData.phone}`;
   const services = [
     {
       title: "Poprawki po Fachowcach",
+      slug: 'poprawki-po-fachowcach-raciborz',
       shortDesc: "Ktoś zaczął remont i zniknął? Poprawiam krzywe płytki, źle spasowane elementy i inne niedociągnięcia.",
       desc: "Zdarza się, że ekipa remontowa nie podołała zadaniu, zostawiła niedokończoną pracę lub po prostu popełniła błędy. Specjalizuję się w ratowaniu takich sytuacji. Poprawiam krzywo zamontowane listwy, źle osadzone drzwi, poprawiam niedoróbki montażowe i wykończeniowe. Dbam o to, aby ostateczny efekt wyglądał perfekcyjnie i cieszył oko, bez konieczności ponownego zaczynania całego remontu.",
       details: [
@@ -246,6 +247,7 @@ Mój numer telefonu: ${formData.phone}`;
     },
     {
       title: "Montaż Mebli bez Stresu",
+      slug: 'montaz-mebli-raciborz',
       shortDesc: "Złożę Twoją nową szafę czy kuchnię sprawnie i solidnie. Skupiam się na idealnym spasowaniu.",
       desc: "Montaż mebli z paczek to dla wielu osób zmora, dla mnie to czysta przyjemność i wyzwanie konstrukcyjne. Składam meble wszystkich popularnych producentów (IKEA, BRW, Agata Meble i inne). Dbam o to, by każda szuflada chodziła płynnie, a fronty były idealnie wyregulowane co do milimetra. Jeśli trzeba, przymocuję meble do ściany dla pełnego bezpieczeństwa.",
       details: [
@@ -258,6 +260,7 @@ Mój numer telefonu: ${formData.phone}`;
     },
     {
       title: "Hydraulika i Naprawy",
+      slug: 'hydraulik-drobne-naprawy-raciborz',
       shortDesc: "Cieknący kran czy wymiana syfonu? Rozwiążę te problemy szybko, zostawiając po sobie porządek.",
       desc: "Małe awarie hydrauliczne potrafią zepsuć humor i zniszczyć podłogę. Pomagam przy wymianie kranów, baterii, syfonów czy wężyków. Montuję również armaturę łazienkową i kuchenną. Nie zajmuję się dużymi instalacjami, dzięki czemu mam czas na te 'drobiazgi', na które inni fachowcy często nie chcą przyjechać.",
       details: [
@@ -270,6 +273,7 @@ Mój numer telefonu: ${formData.phone}`;
     },
     {
       title: "Twoje Oświetlenie",
+      slug: 'montaz-lamp-gniazdek-raciborz',
       shortDesc: "Zamontuję lampy i gniazdka, dbając o bezpieczeństwo i estetykę. Światło musi być idealne.",
       desc: "Prawidłowy montaż oświetlenia to nie tylko estetyka, to przede wszystkim bezpieczeństwo Twojego domu. Montuję żyrandole, kinkiety, listwy LED oraz wymieniam stare gniazdka i przełączniki. Dbam o to, by wszystko było estetycznie wykończone, bez wystających kabli i krzywo zamontowanych ramek.",
       details: [
@@ -282,6 +286,7 @@ Mój numer telefonu: ${formData.phone}`;
     },
     {
       title: "Drobne Prace Montażowe",
+      slug: 'wieszanie-luster-karniszy-tv-raciborz',
       shortDesc: "Lustra, obrazy, karnisze – powieszę je tak, by cieszyły oko. Precyzja to mój znak rozpoznawczy.",
       desc: "Masz do powieszenia ciężkie lustro, galerię obrazów lub karnisze? Dobiorę odpowiednie kołki do rodzaju Twojej ściany (beton, karton-gips, cegła), abyś mógł spać spokojnie. Wszystko montuję przy użyciu profesjonalnej poziomicy laserowej – u mnie nie ma miejsca na montaż 'na oko'.",
       details: [
@@ -294,6 +299,7 @@ Mój numer telefonu: ${formData.phone}`;
     },
     {
       title: "Konserwacja Domu",
+      slug: 'cennik',
       shortDesc: "Regularnie sprawdzę stan Twoich instalacji. Zapobiegnę awariom, zanim w ogóle się pojawią.",
       desc: "Dom wymaga stałej opieki, aby służył lata. Oferuję przeglądy techniczne Twojego mieszkania. Wyreguluję okna, sprawdzę uszczelki, dokręcę luźne klamki. Takie drobne działania prewencyjne oszczędzą Ci dużych wydatków na poważne naprawy w przyszłości i zwiększą komfort życia.",
       details: [
@@ -663,7 +669,10 @@ Mój numer telefonu: ${formData.phone}`;
                       
                       <div className="modal-footer-cta">
                         <p>Potrzebujesz tej usługi? Chętnie pomogę!</p>
-                        <a href="#kontakt" onClick={() => setSelectedService(null)} className="btn">Zapytaj o termin</a>
+                        <div className="modal-cta-row">
+                          <Link to={`/${selectedService.slug}`} className="btn" onClick={() => setSelectedService(null)}>Zobacz szczegóły i ceny <ChevronRight size={16} /></Link>
+                          <a href="tel:+48603721050" className="btn-outline" onClick={() => setSelectedService(null)}><Phone size={16} /> 603 721 050</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -694,12 +703,20 @@ Mój numer telefonu: ${formData.phone}`;
           <motion.div {...fadeInUp} className="about-visual">
              <div className="stat-grid">
                 <div className="stat-item">
-                  <span className="number">100%</span>
-                  <span className="label">Zaangażowania</span>
+                  <span className="number">20+</span>
+                  <span className="label">lat praktyki</span>
                 </div>
                 <div className="stat-item">
-                  <span className="number">Racibórz</span>
-                  <span className="label">Moje Miasto</span>
+                  <span className="number">100%</span>
+                  <span className="label">wycen przed pracą</span>
+                </div>
+                <div className="stat-item">
+                  <span className="number">8</span>
+                  <span className="label">miejscowości w powiecie</span>
+                </div>
+                <div className="stat-item">
+                  <span className="number">1</span>
+                  <span className="label">fachowiec do wszystkiego</span>
                 </div>
              </div>
              <div className="about-image-container">
@@ -910,7 +927,7 @@ Mój numer telefonu: ${formData.phone}`;
               <a href="https://share.google/dLp2Yzpm0KwX41JQ0" target="_blank" rel="noopener noreferrer" className="method maps-link">
                 <div className="method-icon"><MapPin size={24} /></div>
                 <div className="method-text">
-                  <label>Mój warsztat &amp; Dojazd</label>
+                  <label>Obszar działania</label>
                   <span>Racibórz i okolice</span>
                 </div>
               </a>
@@ -961,6 +978,7 @@ Mój numer telefonu: ${formData.phone}`;
                 </div>
                 <button type="submit" className="btn full btn-whatsapp"><WhatsAppIcon /> Wyślij na WhatsApp</button>
                 <p className="form-note">Po kliknięciu otworzy się WhatsApp z gotową wiadomością do Irka — wystarczy nacisnąć „Wyślij”.</p>
+                <p className="form-note">Twoje dane trafiają wyłącznie do Irka i służą tylko do kontaktu w sprawie zlecenia.</p>
               </form>
             )}
           </motion.div>

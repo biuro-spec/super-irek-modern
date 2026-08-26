@@ -7,10 +7,22 @@ import ServicePage from './pages/ServicePage.jsx'
 import { pages } from './pages/pagesData.js'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    if (hash) {
+      // Sekcje renderuja sie z opoznieniem (animacje) - ponawiamy do skutku
+      const id = hash.slice(1)
+      let tries = 0
+      const jump = () => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+        else if (tries++ < 20) setTimeout(jump, 100)
+      }
+      jump()
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
   return null
 }
 
