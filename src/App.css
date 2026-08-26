@@ -2305,3 +2305,22 @@ section {
   .nav-dropdown.open .nav-dropdown-menu { display: block; visibility: visible; transform: none; }
   .nav-dropdown-menu a { font-size: 1rem !important; }
 }
+
+/* Rytm pionowy podstron: globalne section{padding:100px 0} nie dotyczy podstron */
+.subpage-main section { padding: 0; }
+.subpage-main { padding-top: 6.5rem; }
+.breadcrumb { margin-bottom: .5rem; }
+.subpage-main h1 { margin: .6rem 0 1rem; }
+.subpage-intro { margin: 0; }
+.price-table-wrap { margin-top: 2.25rem; }
+.subpage-section { margin-top: 2.75rem; }
+.subpage-section h2 { margin-bottom: .9rem; font-size: 1.35rem; }
+.subpage-section p { margin: 0; }
+.subpage-cta { margin-top: 2.75rem; padding: 1.8rem 2rem; }
+.subpage-cta h2 { font-size: 1.35rem; }
+.related-links { margin: 0; }
+.subpage-footer { margin-top: 3rem; padding: 1.5rem 0 2rem; }
+@media (max-width: 640px) {
+  .subpage-main { padding-top: 5.5rem; }
+  .subpage-section { margin-top: 2.25rem; }
+}

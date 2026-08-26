@@ -511,7 +511,7 @@ const App = () => {
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
                 <Hammer size={18} />
-                <span>Dziś wolne terminy</span>
+                <span>Szybkie terminy</span>
               </motion.div>
               <motion.div
                 className="float-card float-card-stars"
