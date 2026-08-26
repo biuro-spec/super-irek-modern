@@ -2324,3 +2324,8 @@ section {
   .subpage-main { padding-top: 5.5rem; }
   .subpage-section { margin-top: 2.25rem; }
 }
+
+/* WhatsApp */
+.method.whatsapp-link .method-icon { color: #25D366; }
+.btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; }
+.form-note { font-size: .82rem; color: var(--text-light); margin-top: .7rem; text-align: center; }

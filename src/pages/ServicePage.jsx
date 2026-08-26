@@ -170,7 +170,7 @@ const ServicePage = ({ page }) => {
           <p>
             © {new Date().getFullYear()} Super Irek — Złota Rączka Racibórz ·{' '}
             <a href={SITE.phoneHref}>{SITE.phone}</a> ·{' '}
-            <a href="mailto:irek@superirek.pl">irek@superirek.pl</a>
+            <a href="https://wa.me/48603721050" target="_blank" rel="noopener noreferrer">WhatsApp: 603 721 050</a>
           </p>
         </div>
       </footer>
