@@ -13,7 +13,7 @@ export const pages = [
     nav: 'Cennik',
     title: 'Cennik – Złota Rączka Racibórz | Super Irek',
     description:
-      'Ile kosztuje złota rączka w Raciborzu? Orientacyjny cennik Super Irka: roboczogodzina, montaż mebli, naprawy hydrauliczne, lampy i gniazdka. Wycena zawsze przed pracą — zadzwoń: 603 721 050.',
+      'Ile kosztuje złota rączka w Raciborzu? Cennik: roboczogodzina, montaż mebli, hydraulika, lampy. Wycena przed pracą: 603 721 050.',
     h1: 'Cennik usług złotej rączki w Raciborzu',
     intro:
       'Poniżej znajdziesz orientacyjne ceny moich najczęstszych usług. Ostateczną wycenę podaję zawsze PRZED rozpoczęciem pracy — po rozmowie telefonicznej albo po zdjęciu, które wyślesz. Bez niespodzianek i dopisywania pozycji na koniec. Dojazd na terenie Raciborza jest wliczony w cenę.',
@@ -63,7 +63,7 @@ export const pages = [
     nav: 'Montaż mebli',
     title: 'Montaż mebli Racibórz – IKEA, BRW, Agata | Super Irek',
     description:
-      'Montaż i skręcanie mebli w Raciborzu: szafy, kuchnie, komody, łóżka. IKEA, BRW, Agata i inne. Regulacja frontów, mocowanie do ściany. Złota rączka Super Irek — zadzwoń: 603 721 050.',
+      'Montaż i skręcanie mebli w Raciborzu: szafy, kuchnie, komody, łóżka. IKEA, BRW, Agata. Mocowanie do ściany: 603 721 050.',
     h1: 'Montaż mebli w Raciborzu — szafy, kuchnie, komody',
     intro:
       'Paczki stoją w przedpokoju, a instrukcja ma sześćdziesiąt kroków? Składanie mebli to moja codzienność. Montuję meble wszystkich popularnych producentów — IKEA, BRW, Agata Meble, Jysk i innych — w Raciborzu i całym powiecie raciborskim. Przyjeżdżam z własnymi narzędziami, po pracy zabieram kartony.',
@@ -101,9 +101,9 @@ export const pages = [
   {
     slug: 'hydraulik-drobne-naprawy-raciborz',
     nav: 'Drobna hydraulika',
-    title: 'Drobne naprawy hydrauliczne Racibórz – baterie, syfony | Super Irek',
+    title: 'Drobne naprawy hydrauliczne Racibórz | Super Irek',
     description:
-      'Cieknący kran, wymiana baterii, syfonu lub silikonu w Raciborzu. Drobne usługi hydrauliczne, na które duże firmy nie przyjeżdżają. Super Irek — szybki termin: 603 721 050.',
+      'Cieknący kran, wymiana baterii, syfonu lub silikonu w Raciborzu. Prace, na które duże firmy nie przyjeżdżają: 603 721 050.',
     h1: 'Drobne naprawy hydrauliczne w Raciborzu',
     intro:
       'Kapiący kran potrafi w miesiąc nalać do rachunku więcej, niż kosztuje jego naprawa. Zajmuję się drobną hydrauliką — dokładnie tymi pracami, na które „duzi” hydraulicy nie mają czasu. Nie prowadzę dużych instalacji, dzięki czemu na cieknący syfon umawiam się w dzień lub dwa, a nie za trzy tygodnie.',
@@ -141,7 +141,7 @@ export const pages = [
   {
     slug: 'montaz-lamp-gniazdek-raciborz',
     nav: 'Lampy i gniazdka',
-    title: 'Montaż lamp i gniazdek Racibórz – oświetlenie, LED | Super Irek',
+    title: 'Montaż lamp i gniazdek Racibórz – oświetlenie | Super Irek',
     description:
       'Montaż lamp, żyrandoli, kinkietów i taśm LED oraz wymiana gniazdek i włączników w Raciborzu. Bezpiecznie i estetycznie. Super Irek — zadzwoń: 603 721 050.',
     h1: 'Montaż lamp i gniazdek w Raciborzu',
@@ -183,7 +183,7 @@ export const pages = [
     nav: 'Lustra, karnisze, TV',
     title: 'Wieszanie luster, karniszy i TV Racibórz | Super Irek',
     description:
-      'Zawieszenie lustra, obrazów, półek, karniszy i telewizora na ścianie w Raciborzu. Dobór kołków do każdej ściany, montaż z poziomicą laserową. Super Irek: 603 721 050.',
+      'Zawieszenie lustra, obrazów, półek, karniszy i telewizora w Raciborzu. Dobór kołków do każdej ściany: 603 721 050.',
     h1: 'Wieszanie luster, karniszy, półek i telewizorów w Raciborzu',
     intro:
       'Ciężkie lustro nad komodą, galeria zdjęć na całą ścianę albo telewizor, który ma wisieć równo i się nie urwać — to prace, przy których liczy się dobór kołka do ściany. Beton, cegła, pustak, karton-gips czy płytka w łazience: do każdego podłoża mam właściwe mocowanie i wiertło.',
@@ -221,9 +221,9 @@ export const pages = [
   {
     slug: 'poprawki-po-fachowcach-raciborz',
     nav: 'Poprawki po fachowcach',
-    title: 'Poprawki po fachowcach Racibórz – dokończenie remontu | Super Irek',
+    title: 'Poprawki po fachowcach Racibórz | Super Irek',
     description:
-      'Ekipa zniknęła, a listwy krzywe i drzwi się nie domykają? Poprawiam i kończę prace po innych fachowcach w Raciborzu — bez zaczynania remontu od nowa. Super Irek: 603 721 050.',
+      'Ekipa zniknęła, listwy krzywe, drzwi się nie domykają? Kończę prace po innych fachowcach w Raciborzu: 603 721 050.',
     h1: 'Poprawki po fachowcach w Raciborzu',
     intro:
       'To najczęstszy telefon, jaki odbieram: ekipa skończyła (albo zniknęła w połowie), a w mieszkaniu zostały krzywe listwy, niedocięte progi i drzwi, które szorują o podłogę. Specjalizuję się w ratowaniu takich sytuacji — poprawiam i kończę cudzą pracę tak, żeby efekt wyglądał, jakby od początku zrobił ją ktoś, komu zależy.',

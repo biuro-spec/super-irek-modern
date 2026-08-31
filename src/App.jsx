@@ -371,9 +371,9 @@ Mój numer telefonu: ${formData.phone}`;
   const [sloganIndex, setSloganIndex] = useState(0);
 
   useEffect(() => {
-    document.title = 'Złota Rączka Racibórz – Super Irek | Montaż mebli, drobne remonty, naprawy domowe';
+    document.title = 'Złota rączka Racibórz – montaż mebli, naprawy | Super Irek';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'Złota rączka Racibórz i powiat raciborski. Montaż mebli IKEA, naprawy hydrauliczne, lampy i gniazdka, wieszanie luster i karniszy, poprawki po fachowcach. Szybki dojazd, uczciwa wycena. Zadzwoń: 603 721 050.');
+    if (desc) desc.setAttribute('content', 'Złota rączka w Raciborzu: montaż mebli IKEA, drobne naprawy hydrauliczne, lampy i gniazdka, wieszanie TV. Zadzwoń: 603 721 050.');
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', 'https://superirek.pl/');
   }, []);
