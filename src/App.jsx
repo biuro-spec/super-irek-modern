@@ -363,7 +363,7 @@ Mój numer telefonu: ${formData.phone}`;
   useEffect(() => {
     const timer = setInterval(() => {
       setSloganIndex((prev) => (prev + 1) % slogans.length);
-    }, 8000);
+    }, 9000);
     return () => clearInterval(timer);
   }, [slogans.length]);
 
@@ -449,10 +449,10 @@ Mój numer telefonu: ${formData.phone}`;
                 <motion.p
                   className="hero-slogan"
                   key={sloganIndex}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
+                  exit={{ opacity: 0, y: -14 }}
+                  transition={{ duration: 0.28, ease: 'easeOut' }}
                 >
                   {slogans[sloganIndex]}
                 </motion.p>
