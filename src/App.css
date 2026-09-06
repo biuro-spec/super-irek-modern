@@ -2394,3 +2394,30 @@ section[id] { scroll-margin-top: 90px; }
   .subpage-badge { width: 118px; height: 118px; }
   .subpage-header .subpage-intro { text-align: left; }
 }
+
+/* Naglowek podstrony v2: duza naklejka + tytul obok, wstep pelna szerokoscia */
+.subpage-header { display: block; }
+.subpage-header-top {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1.6rem;
+}
+.subpage-badge {
+  width: 240px;
+  height: 240px;
+  flex: 0 0 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 34px rgba(5, 99, 68, 0.2));
+}
+.subpage-header h1 { margin: 0; }
+.subpage-header .subpage-intro { max-width: 68ch; }
+@media (max-width: 900px) {
+  .subpage-header-top { gap: 1.8rem; }
+  .subpage-badge { width: 180px; height: 180px; flex-basis: 180px; }
+}
+@media (max-width: 720px) {
+  .subpage-header-top { flex-direction: column; text-align: center; gap: 1.2rem; }
+  .subpage-badge { width: 190px; height: 190px; flex-basis: auto; }
+  .subpage-header .subpage-intro { text-align: left; }
+}

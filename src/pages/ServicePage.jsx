@@ -82,20 +82,20 @@ const ServicePage = ({ page }) => {
       <main className="subpage-main container">
 
         <header className="subpage-header">
-          {page.badge && (
-            <img
-              className="subpage-badge"
-              src={`${import.meta.env.BASE_URL}assets/badges/${page.badge}.webp`}
-              alt={`Super Irek — ${page.nav}, Racibórz`}
-              width="520"
-              height="520"
-              loading="eager"
-            />
-          )}
-          <div>
+          <div className="subpage-header-top">
+            {page.badge && (
+              <img
+                className="subpage-badge"
+                src={`${import.meta.env.BASE_URL}assets/badges/${page.badge}.webp?v=2`}
+                alt={`Super Irek — ${page.nav}, Racibórz`}
+                width="520"
+                height="520"
+                loading="eager"
+              />
+            )}
             <h1>{page.h1}</h1>
-            <p className="subpage-intro">{page.intro}</p>
           </div>
+          <p className="subpage-intro">{page.intro}</p>
         </header>
 
         {page.prices && (
