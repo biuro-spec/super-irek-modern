@@ -719,12 +719,10 @@ Mój numer telefonu: ${formData.phone}`;
               {[...Array(5)].map((_, i) => <Star key={i} size={20} fill="#FFC107" color="#FFC107" />)}
             </div>
             <blockquote>
-              „Szczerze polecamy! Pan Irek wykonywał u nas remont schodów zewnętrznych z ułożeniem
-              nowych płytek, malowanie salonu oraz cały szereg drobnych poprawek w domu. Prace zostały
-              wykonane bardzo solidnie, estetycznie i z dbałością o detale. Schody wyglądają świetnie
-              i są rzetelnie wykończone, a salon po malowaniu prezentuje się idealnie. Wszystkie drobne
-              usterki zostały sprawnie usunięte. To rzetelny, dokładny i słowny fachowiec — z czystym
-              sumieniem polecam jego usługi każdemu, kto szuka sprawdzonej ekipy do remontu!”
+              „Szczerze polecamy! Pan Irek wykonywał u nas […] cały szereg drobnych poprawek w domu.
+              Prace zostały wykonane bardzo solidnie, estetycznie i z dbałością o detale. Wszystkie
+              drobne usterki zostały sprawnie usunięte. To rzetelny, dokładny i słowny fachowiec —
+              z czystym sumieniem polecam jego usługi.”
             </blockquote>
             <figcaption>
               <strong>Bernadeta O.</strong>
