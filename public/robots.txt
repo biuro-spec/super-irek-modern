@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /fb/   # grafiki do postow - nie musza byc w wyszukiwarce
 
 Sitemap: https://superirek.pl/sitemap.xml
