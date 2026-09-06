@@ -81,8 +81,22 @@ const ServicePage = ({ page }) => {
 
       <main className="subpage-main container">
 
-        <h1>{page.h1}</h1>
-        <p className="subpage-intro">{page.intro}</p>
+        <header className="subpage-header">
+          {page.badge && (
+            <img
+              className="subpage-badge"
+              src={`${import.meta.env.BASE_URL}assets/badges/${page.badge}.webp`}
+              alt={`Super Irek — ${page.nav}, Racibórz`}
+              width="520"
+              height="520"
+              loading="eager"
+            />
+          )}
+          <div>
+            <h1>{page.h1}</h1>
+            <p className="subpage-intro">{page.intro}</p>
+          </div>
+        </header>
 
         {page.prices && (
           <div className="price-table-wrap">

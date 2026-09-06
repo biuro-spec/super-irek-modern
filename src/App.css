@@ -2372,3 +2372,25 @@ section[id] { scroll-margin-top: 90px; }
 }
 .reviews-panel .reviews-stars { display: flex; justify-content: center; gap: .3rem; margin-bottom: 1.2rem; }
 .reviews-panel p { color: var(--text-light); font-size: 1.08rem; line-height: 1.7; margin: 0; }
+
+/* Naglowek podstrony: godlo uslugi + tytul; wiecej powietrza pod menu */
+.subpage-main { padding-top: 9.5rem; }
+.subpage-header {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.subpage-badge {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(0, 112, 74, 0.18));
+}
+.subpage-header h1 { margin: 0 0 .9rem; }
+@media (max-width: 720px) {
+  .subpage-main { padding-top: 7.5rem; }
+  .subpage-header { grid-template-columns: 1fr; gap: 1.1rem; justify-items: center; text-align: center; }
+  .subpage-badge { width: 118px; height: 118px; }
+  .subpage-header .subpage-intro { text-align: left; }
+}

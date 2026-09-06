@@ -10,6 +10,7 @@ export const SITE = {
 export const pages = [
   {
     slug: 'cennik',
+    badge: 'cennik',
     nav: 'Cennik',
     title: 'Cennik – Złota Rączka Racibórz | Super Irek',
     description:
@@ -60,6 +61,7 @@ export const pages = [
   },
   {
     slug: 'montaz-mebli-raciborz',
+    badge: 'montaz-mebli',
     nav: 'Montaż mebli',
     title: 'Montaż mebli Racibórz – IKEA, BRW, Agata | Super Irek',
     description:
@@ -100,6 +102,7 @@ export const pages = [
   },
   {
     slug: 'hydraulik-drobne-naprawy-raciborz',
+    badge: 'hydraulika',
     nav: 'Drobna hydraulika',
     title: 'Drobne naprawy hydrauliczne Racibórz | Super Irek',
     description:
@@ -140,6 +143,7 @@ export const pages = [
   },
   {
     slug: 'montaz-lamp-gniazdek-raciborz',
+    badge: 'lampy',
     nav: 'Lampy i gniazdka',
     title: 'Montaż lamp i gniazdek Racibórz – oświetlenie | Super Irek',
     description:
@@ -180,6 +184,7 @@ export const pages = [
   },
   {
     slug: 'wieszanie-luster-karniszy-tv-raciborz',
+    badge: 'lustra-tv',
     nav: 'Lustra, karnisze, TV',
     title: 'Wieszanie luster, karniszy i TV Racibórz | Super Irek',
     description:
@@ -220,6 +225,7 @@ export const pages = [
   },
   {
     slug: 'poprawki-po-fachowcach-raciborz',
+    badge: 'poprawki',
     nav: 'Poprawki po fachowcach',
     title: 'Poprawki po fachowcach Racibórz | Super Irek',
     description:
