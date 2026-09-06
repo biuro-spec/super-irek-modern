@@ -68,7 +68,7 @@ export const pages = [
       'Montaż i skręcanie mebli w Raciborzu: szafy, kuchnie, komody, łóżka. IKEA, BRW, Agata. Mocowanie do ściany: 603 721 050.',
     h1: 'Montaż mebli w Raciborzu — szafy, kuchnie, komody',
     intro:
-      'Paczki stoją w przedpokoju, a instrukcja ma sześćdziesiąt kroków? Składanie mebli to moja codzienność. Montuję meble wszystkich popularnych producentów — IKEA, BRW, Agata Meble, Jysk i innych — w Raciborzu i całym powiecie raciborskim. Przyjeżdżam z własnymi narzędziami, po pracy zabieram kartony.',
+      'Paczki stoją w przedpokoju drugi tydzień? Instrukcja zwykle jest prosta — brakuje czasu, drugiej pary rąk i cierpliwości do regulowania frontów. Montuję meble wszystkich popularnych producentów — IKEA, BRW, Agata Meble, Jysk i innych — w Raciborzu i całym powiecie raciborskim. Przyjeżdżam z własnymi narzędziami, po pracy zabieram kartony.',
     sections: [
       {
         h2: 'Co montuję najczęściej?',
