@@ -714,6 +714,7 @@ Mój numer telefonu: ${formData.phone}`;
             <h2 className="section-title">Zadowoleni Sąsiedzi</h2>
             <p className="section-subtitle">Zaufanie buduje się latami — i sprawdza w Google.</p>
           </motion.div>
+          <div className="reviews-grid">
           <motion.figure {...fadeInUp} className="review-real">
             <div className="reviews-stars" aria-hidden="true">
               {[...Array(5)].map((_, i) => <Star key={i} size={20} fill="#FFC107" color="#FFC107" />)}
@@ -729,6 +730,23 @@ Mój numer telefonu: ${formData.phone}`;
               <a href="https://share.google/dLp2Yzpm0KwX41JQ0" target="_blank" rel="noopener noreferrer">opinia z Google</a>
             </figcaption>
           </motion.figure>
+
+          <motion.figure {...fadeInUp} className="review-real">
+            <div className="reviews-stars" aria-hidden="true">
+              {[...Array(5)].map((_, i) => <Star key={i} size={20} fill="#FFC107" color="#FFC107" />)}
+            </div>
+            <blockquote>
+              „Pan Irek wykonywał u nas prace wykończeniowe przy tworzeniu Life-Centrum w Raciborzu:
+              montaż całej armatury w łazienkach i toalecie, silikonowanie i wykończenia. Robota
+              perfekcyjna — równo, czysto, bez jednej poprawki po zakończeniu. Do tego terminowość
+              i porządek na budowie każdego dnia. Polecam z pełnym przekonaniem.”
+            </blockquote>
+            <figcaption>
+              <strong>Life-Centrum Usług Zdrowotnych</strong>
+              <span className="rola">klient firmowy, Racibórz</span>
+            </figcaption>
+          </motion.figure>
+          </div>
 
           <motion.div {...fadeInUp} className="reviews-panel">
             <div className="reviews-stars" aria-hidden="true">
