@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ChevronRight, CheckCircle2, MapPin } from 'lucide-react';
 import Navbar from '../components/Navbar.jsx';
+import MobileCallBar from '../components/MobileCallBar.jsx';
 import { pages, SITE } from './pagesData.js';
 
 // Ustawia title/description/canonical/JSON-LD dla podstrony. Prerender
@@ -188,6 +189,8 @@ const ServicePage = ({ page }) => {
           </p>
         </div>
       </footer>
+
+      <MobileCallBar />
     </div>
   );
 };

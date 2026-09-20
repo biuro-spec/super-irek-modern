@@ -1068,6 +1068,29 @@ Mój numer telefonu: ${formData.phone}`;
       </footer>
       <AnimatePresence>
         {showScrollTop && (
+          <motion.div
+            key="pasek-kontaktu"
+            className="mobile-call-bar"
+            initial={{ y: 80 }}
+            animate={{ y: 0 }}
+            exit={{ y: 80 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+          >
+            <a href="tel:+48603721050" className="mcb-call">
+              <Phone size={20} /> Zadzwoń teraz
+            </a>
+            <a
+              href="https://wa.me/48603721050"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mcb-wa"
+              aria-label="Napisz na WhatsApp"
+            >
+              <WhatsAppIcon size={22} />
+            </a>
+          </motion.div>
+        )}
+        {showScrollTop && (
           <motion.button
             initial={{ opacity: 0, scale: 0, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}

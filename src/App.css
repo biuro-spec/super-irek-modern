@@ -2588,3 +2588,54 @@ section[id] { scroll-margin-top: 90px; }
   .section-title { margin-bottom: 1.2rem; }
   .services-grid, .why-grid { gap: 1.1rem; }
 }
+
+/* Stały pasek kontaktu na telefonie — firma żyje z telefonów,
+   więc numer musi być pod kciukiem na całej długości strony */
+.mobile-call-bar { display: none; }
+@media (max-width: 767px) {
+  .mobile-call-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1200;
+    display: flex;
+    gap: .6rem;
+    padding: .7rem .9rem calc(.7rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, .94);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 112, 74, .15);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, .08);
+  }
+  .mcb-call {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    min-height: 52px;
+    background: var(--primary-green);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1.02rem;
+    text-decoration: none;
+    letter-spacing: .01em;
+  }
+  .mcb-wa {
+    flex: 0 0 52px;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* miejsce pod paskiem, żeby nie zasłaniał stopki */
+  .footer { padding-bottom: 92px; }
+  .subpage-footer { padding-bottom: 92px; }
+  /* strzałka w górę ponad paskiem */
+  .scroll-to-top { bottom: 96px; right: 16px; width: 44px; height: 44px; }
+}
