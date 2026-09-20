@@ -2556,3 +2556,35 @@ section[id] { scroll-margin-top: 90px; }
 @media (max-width: 900px) {
   .reviews-grid { grid-template-columns: 1fr; max-width: 640px; }
 }
+
+/* ===== Mobile-first: poprawki z audytu 2026-09-20 ===== */
+@media (max-width: 767px) {
+  /* 1. Palec ma 44 px — tyle musi mieć każdy klikalny element (WCAG 2.5.8) */
+  .menu-toggle { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  .nav-links a, .nav-dropdown-toggle { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+  .nav-dropdown-menu a { min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .hero-services a { min-height: 44px; padding-top: .7rem; padding-bottom: .7rem; }
+  .review-real figcaption a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer-col ul a,
+  .footer-location,
+  .footer-socials .social-link,
+  .footer-contact-item a,
+  .footer-legal a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .footer-col ul li { margin: 0; }
+
+  /* 2. Najmniejszy tekst był 10,9 px — nieczytelny na telefonie */
+  .hero-badge { font-size: .78rem; }
+  .hero-trust { font-size: .9rem; }
+  .price-note { font-size: .88rem; }
+
+  /* 3. Strona miała 17,7 ekranu; ciaśniejsze sekcje ucinają ~2 ekrany */
+  section { padding: 56px 0; }
+  .footer { padding-top: 56px; }
+  .footer-grid { gap: 2rem; }
+  .section-title { margin-bottom: 1.2rem; }
+  .services-grid, .why-grid { gap: 1.1rem; }
+}
