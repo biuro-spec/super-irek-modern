@@ -1,0 +1,36 @@
+/* Wykroj wlasny: tylko znaki uzywane na stronie (polski alfabet + interpunkcja).
+   Pelne paczki @fontsource wazyly 232 KB w osmiu plikach; te cztery wazą ok. 59 KB.
+   Generator: scratchpad/fonty.py - przy zmianie tekstow o nietypowych znakach
+   (np. obce nazwiska) trzeba dopisac je do ZNAKI i wygenerowac ponownie. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/montserrat-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/montserrat-800.woff2') format('woff2');
+}

@@ -2639,3 +2639,10 @@ section[id] { scroll-margin-top: 90px; }
   /* strzałka w górę ponad paskiem */
   .scroll-to-top { bottom: 96px; right: 16px; width: 44px; height: 44px; }
 }
+
+/* Hasło w hero było składane krojem Inter w grubości 800, której nie mamy —
+   przeglądarka pogrubiała je sztucznie. Montserrat 800 jest realnie wczytany. */
+.slogan-rotator .hero-slogan,
+.slogan-rotator h1 {
+  font-family: 'Montserrat', sans-serif;
+}
