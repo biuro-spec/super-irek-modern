@@ -2674,3 +2674,62 @@ section[id] { scroll-margin-top: 90px; }
   .hero-services a:hover,
   .related-links a:hover { background: inherit; color: inherit; transform: none; }
 }
+
+/* ===== Reakcja na dotknięcie =====
+   W całym arkuszu nie było ani jednego :active — na telefonie interfejs
+   w żaden sposób nie potwierdzał, że przyjął dotknięcie. Skala 0,97 i 140 ms:
+   na tyle mało, żeby nie spowalniać, na tyle dużo, żeby palec to poczuł. */
+.btn,
+.btn-outline,
+.btn-small,
+.btn-primary,
+.mcb-call,
+.mcb-wa,
+.hero-services a,
+.related-links a,
+.google-reviews-link,
+.faq-item summary,
+.menu-toggle,
+.nav-dropdown-toggle,
+.nav-links a,
+.scroll-to-top,
+.service-card,
+.gallery-item,
+.footer-contact-item a {
+  transition-property: transform, background-color, color, border-color, box-shadow;
+  transition-duration: 140ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active,
+.btn-outline:active,
+.btn-small:active,
+.btn-primary:active,
+.mcb-call:active,
+.mcb-wa:active,
+.hero-services a:active,
+.related-links a:active,
+.google-reviews-link:active,
+.menu-toggle:active,
+.nav-dropdown-toggle:active,
+.nav-links a:active,
+.scroll-to-top:active,
+.footer-contact-item a:active {
+  transform: scale(0.97);
+}
+
+/* Karty i zdjęcia są większe, więc ta sama skala byłaby na nich przesadna */
+.service-card:active,
+.gallery-item:active,
+.faq-item summary:active {
+  transform: scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:active, .btn-outline:active, .btn-small:active, .btn-primary:active,
+  .mcb-call:active, .mcb-wa:active, .hero-services a:active,
+  .service-card:active, .gallery-item:active {
+    transform: scale(0.995);
+  }
+}

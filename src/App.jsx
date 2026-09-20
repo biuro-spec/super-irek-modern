@@ -487,17 +487,11 @@ Mój numer telefonu: ${formData.phone}`;
           >
             <div className="image-wrapper">
               <img src={`${import.meta.env.BASE_URL}irek-victory.webp`} alt="Super Irek - Profesjonalna Złota Rączka Racibórz i okolice" title="Super Irek - Naprawy Domowe Racibórz" fetchpriority="high" loading="eager"  />
-              <motion.div 
+              <motion.div
                 className="experience-badge"
-                animate={{ 
-                  scale: [1, 1.08, 1],
-                  rotate: [0, 2, -2, 0]
-                }}
-                transition={{ 
-                  duration: 5, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
+                initial={{ scale: 0.85, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.5, type: 'spring', bounce: 0.35, duration: 0.6 }}
               >
                 <span className="years">20+</span>
                 <span className="label">Lat Praktyki</span>
@@ -521,18 +515,9 @@ Mój numer telefonu: ${formData.phone}`;
                 <span>Sąsiedzi polecają</span>
               </motion.div>
             </div>
-            <motion.div 
-              className="hero-circle-bg"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.7, 0.5]
-              }}
-              transition={{ 
-                duration: 8, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            ></motion.div>
+            {/* Kolo bylo animowane w nieskonczonosc: strona renderowala 60 klatek/s
+                bez interakcji, nad zagieciem, przez cala wizyte. Zostaje sam ksztalt. */}
+            <div className="hero-circle-bg" />
           </motion.div>
         </div>
       </header>
