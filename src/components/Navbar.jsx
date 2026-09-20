@@ -28,6 +28,9 @@ const Navbar = () => {
         >
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
+        {isMenuOpen && (
+          <div className="nav-backdrop" onClick={close} aria-hidden="true" />
+        )}
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li
             className={`nav-dropdown ${isServicesOpen ? 'open' : ''}`}

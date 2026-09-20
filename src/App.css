@@ -2733,3 +2733,49 @@ section[id] { scroll-margin-top: 90px; }
     transform: scale(0.995);
   }
 }
+
+/* ===== Szuflada menu: transform zamiast animowania "right" =====
+   Było `transition: all 0.5s` na pozycji — przeglądarka przeliczała układ
+   w każdej klatce, a razem z nią cień i obramowanie. Teraz sam transform. */
+@media (max-width: 1280px) {
+  .nav-links {
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 320ms cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: transform;
+  }
+  .nav-links.active { transform: translateX(0); }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 30, 24, 0.45);
+    z-index: 999;
+    animation: przyciemnienie 220ms ease-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+@keyframes przyciemnienie {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== FAQ: płynne rozwijanie =====
+   <details> otwiera się skokowo. ::details-content pozwala animować wysokość
+   bez JS; starsze przeglądarki dostaną dotychczasowe zachowanie. */
+@supports selector(::details-content) {
+  :root { interpolate-size: allow-keywords; }
+  .faq-item::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 240ms cubic-bezier(0.23, 1, 0.32, 1),
+                content-visibility 240ms allow-discrete;
+  }
+  .faq-item[open]::details-content { block-size: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links { transition-duration: 1ms; }
+  .faq-item::details-content { transition-duration: 1ms; }
+  .nav-backdrop { animation: none; }
+}

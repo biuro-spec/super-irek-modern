@@ -399,6 +399,9 @@ Mój numer telefonu: ${formData.phone}`;
             )}
           </AnimatePresence>
 
+          {isMenuOpen && (
+            <div className="nav-backdrop" onClick={() => setIsMenuOpen(false)} aria-hidden="true" />
+          )}
           <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
             <li
               className={`nav-dropdown ${isServicesOpen ? 'open' : ''}`}
@@ -800,10 +803,10 @@ Mój numer telefonu: ${formData.phone}`;
                 <motion.div
                   layout
                   key={item.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4 }}
+                  initial={{ opacity: 0, scale: 0.94, y: 12 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.94 }}
+                  transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1], delay: (index % 6) * 0.045 }}
                   className="gallery-item-card"
                   onClick={() => setSelectedGalleryImgIndex(index)}
                 >
@@ -927,16 +930,31 @@ Mój numer telefonu: ${formData.phone}`;
             </div>
           </motion.div>
           <motion.div {...fadeInUp} className="contact-form-box">
+            <AnimatePresence mode="wait" initial={false}>
             {isSubmitted ? (
-              <div className="success-msg">
+              <motion.div
+                key="wyslane"
+                className="success-msg"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
+              >
                 <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
                   <ShieldCheck size={80} color="#00704A" />
                 </motion.div>
                 <h3>WhatsApp otwarty!</h3>
                 <p>Dokończ wysyłkę w WhatsAppie — wiadomość jest już przygotowana. Odezwę się, jak tylko odłożę narzędzia!</p>
-              </div>
+              </motion.div>
             ) : (
-              <form onSubmit={handleSubmit}>
+              <motion.form
+                key="formularz"
+                onSubmit={handleSubmit}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
+              >
                 <div className="form-row">
                   <div className="form-group">
                     <label>Twoje Imię</label>
@@ -972,8 +990,9 @@ Mój numer telefonu: ${formData.phone}`;
                 <button type="submit" className="btn full btn-whatsapp"><WhatsAppIcon /> Wyślij na WhatsApp</button>
                 <p className="form-note">Po kliknięciu otworzy się WhatsApp z gotową wiadomością do Irka — wystarczy nacisnąć „Wyślij”.</p>
                 <p className="form-note">Twoje dane trafiają wyłącznie do Irka i służą tylko do kontaktu w sprawie zlecenia.</p>
-              </form>
+              </motion.form>
             )}
+            </AnimatePresence>
           </motion.div>
         </div>
       </section>
