@@ -2646,3 +2646,31 @@ section[id] { scroll-margin-top: 90px; }
 .slogan-rotator h1 {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Menu na telefonie: było wyśrodkowane bez przewijania, więc po rozwinięciu
+   listy usług pozycje wychodziły poza ekran i nie dało się do nich dojechać
+   (na 375x667 znikał m.in. przycisk z numerem telefonu). */
+@media (max-width: 1280px) {
+  .nav-links {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: .35rem;
+    padding: 5.5rem 1.25rem 2rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links > li { width: 100%; }
+  .nav-links a, .nav-dropdown-toggle { font-size: 1.05rem; }
+  .nav-links .btn-small { margin-top: .6rem; padding: .9rem 1.2rem; }
+  .nav-dropdown-menu { background: #F4FAF7; border-radius: 12px; margin: .2rem 0 .4rem; }
+  .nav-dropdown-menu a { font-size: .98rem !important; }
+}
+
+/* Podświetlenie tylko tam, gdzie jest kursor — na dotyku zostawało „zacięte” */
+@media (hover: none) {
+  .nav-dropdown-menu a:hover,
+  .nav-links a:hover,
+  .hero-services a:hover,
+  .related-links a:hover { background: inherit; color: inherit; transform: none; }
+}
